@@ -1,5 +1,6 @@
 const { Model, DataTypes } = require('sequelize');
 const sequelize = require('../config/connection');
+const bcrypt = require('bcrypt');
 
 class User extends Model {}
 
@@ -19,20 +20,26 @@ User.init(
       type: DataTypes.STRING,
       allowNull: true,
     },
-    genre: {
+    password: {
+      type: DataTypes.STRING,
+      allowNull: false,
+      validate: { len: [8] },
+    },
+    state: {
       type: DataTypes.STRING,
       allowNull: false,
     },
-    has_nuts: {
+    zipcode: {
       type: DataTypes.BOOLEAN,
     },
   },
   {
+    hooks: { beforeCreate: async (newUserData) => { newUserData.password = await bcrypt.hash(newUserData.password, 10); return newUserData; }, },
     sequelize,
     freezeTableName: true,
     underscored: true,
-    modelName: 'dish',
+    modelName: 'user',
   }
 );
 
-module.exports = Dish;
+module.exports = User;
