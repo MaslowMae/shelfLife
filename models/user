@@ -1,0 +1,38 @@
+const { Model, DataTypes } = require('sequelize');
+const sequelize = require('../config/connection');
+
+class User extends Model {}
+
+User.init(
+  {
+    firstName: {
+      type: DataTypes.text,
+      allowNull: false,
+      primaryKey: true,
+      autoIncrement: true,
+    },
+    lastName: {
+      type: DataTypes.STRING,
+      allowNull: false,
+    },
+    email: {
+      type: DataTypes.STRING,
+      allowNull: true,
+    },
+    genre: {
+      type: DataTypes.STRING,
+      allowNull: false,
+    },
+    has_nuts: {
+      type: DataTypes.BOOLEAN,
+    },
+  },
+  {
+    sequelize,
+    freezeTableName: true,
+    underscored: true,
+    modelName: 'dish',
+  }
+);
+
+module.exports = Dish;
