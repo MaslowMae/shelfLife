@@ -1,0 +1,7 @@
+{
+  "dependencies": {
+    "express": "^4.19.2",
+    "inquire": "^0.4.8",
+    "sequelize": "^6.37.2"
+  }
+}
