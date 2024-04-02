@@ -5,28 +5,25 @@ class Post extends Model {}
 
 Post.init(
   {
-    ID: {
+    id: {
       type: DataTypes.INTEGER,
       allowNull: false,
       primaryKey: true,
       autoIncrement: true,
     },
-    User: {
+    username: {
         type: DataTypes.STRING,
         allowNull: false,
       },
-    Date: {
-      type: DataTypes.DATE,
-    },
-    Topic: {
+    topic: {
         type: DataTypes.STRING,
         allowNull: false,
       },
-    Input: {
+    input: {
       type: DataTypes.TEXT,
       allowNull: true,
     },
-    ISBN: { 
+    isbn: { 
         type: DataTypes.INTEGER,
         allowNull: true,
       },

@@ -20,6 +20,10 @@ User.init(
       type: DataTypes.STRING,
       allowNull: true,
     },
+    username: {
+      type: DataTypes.STRING,
+      allowNull: false,
+    },
     password: {
       type: DataTypes.STRING,
       allowNull: false,
@@ -30,7 +34,8 @@ User.init(
       allowNull: false,
     },
     zipcode: {
-      type: DataTypes.BOOLEAN,
+      type: DataTypes.INTEGER,
+      allowNull: false,
     },
   },
   {
