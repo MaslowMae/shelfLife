@@ -7,7 +7,7 @@ class User extends Model {}
 User.init(
   {
     firstName: {
-      type: DataTypes.text,
+      type: DataTypes.TEXT,
       allowNull: false,
       primaryKey: true,
       autoIncrement: true,
