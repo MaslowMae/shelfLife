@@ -11,22 +11,26 @@ Post.init(
       primaryKey: true,
       autoIncrement: true,
     },
-    username: {
+    postTitle: {
         type: DataTypes.STRING,
         allowNull: false,
       },
-    topic: {
+    user_id: {
         type: DataTypes.STRING,
         allowNull: false,
+        references: {
+          model: 'user',
+          key: 'id',
+        },
       },
-    input: {
+    book_id: {
       type: DataTypes.TEXT,
       allowNull: true,
-    },
-    isbn: { 
-        type: DataTypes.INTEGER,
-        allowNull: true,
+      references: {
+        model: 'book',
+        key: 'id',
       },
+    },
   },
   {
     sequelize,
