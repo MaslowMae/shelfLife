@@ -5,21 +5,21 @@ class Comment extends Model {}
 
 Comment.init(
   {
-    ID: {
+    id: {
       type: DataTypes.INTEGER,
       allowNull: false,
       primaryKey: true,
       autoIncrement: true,
     },
-    User: {
+    user: {
         type: DataTypes.STRING,
         allowNull: false,
       },
-    Date: {
+    date: {
       type: DataTypes.STRING,
       allowNull: false,
     },
-    Input: {
+    input: {
       type: DataTypes.TEXT,
       allowNull: true,
     },
