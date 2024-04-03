@@ -6,3 +6,74 @@ header.masthead {
     padding-top: 8rem;
     padding-bottom: 8rem;
 }
+
+.features-icons .features-icons-item .features-icons-icon i {
+    font-size: 4.5rem;
+}
+
+.text-primary {
+    --bs-text-opacity: 1;
+    color: rgba(var(--bs-primary-rgb), var(--bs-text-opacity)) !important;
+}
+
+.m-auto {
+    margin: auto !important;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+user agent stylesheet i {
+    font-style: italic;
+}
+
+.features-icons .features-icons-item .features-icons-icon {
+    height: 7rem;
+}
+
+.d-flex {
+    display: flex !important;
+}
+
+.features-icons .features-icons-item {
+    max-width: 20rem;
+}
+
+div {
+    display: block;
+}
+
+
+/* .row>* {
+    flex-shrink: 0;
+    width: 100%;
+    max-width: 100%;
+    padding-right: calc(var(--bs-gutter-x) * 0.5);
+    padding-left: calc(var(--bs-gutter-x) * 0.5);
+    margin-top: var(--bs-gutter-y);
+} */
+
+.mb-0 {
+    margin-bottom: 0 !important;
+}
+
+.lead {
+    font-size: 1.25rem;
+    font-weight: 300;
+}
+
+p {
+    margin-top: 0;
+    margin-bottom: 1rem;
+}
+
+p {
+    display: block;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+}
