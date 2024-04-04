@@ -1,0 +1,20 @@
+[
+    {
+        "postTitle": "Why I Love This Book!",
+        "postContent": "This book is amazing! I love it so much! It's the best book I've ever read!",
+        "user_id": 1,
+        "book_id": 1
+    },
+    {
+        "postTitle": "Why I Hate This Book!",
+        "postContent": "This book is terrible! I hate it so much! It's the worst book I've ever read!",
+        "user_id": 2,
+        "book_id": 2
+    },
+    {
+        "postTitle": "This Book Saved my Life!",
+        "postContent": "This book is a life-saver!",
+        "user_id": 3,
+        "book_id": 3
+    }
+]
