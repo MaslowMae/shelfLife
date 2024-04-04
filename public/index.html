@@ -16,19 +16,28 @@
 <body>
     <nav class="navbar navbar-expand-lg bg-body-tertiary">
         <div class="container-fluid">
-            <a class="navbar-brand" href="#" id="title"><img src="./img/bookimg.gif" id="bookimg">shelf Life</a>
+            <a class="navbar-brand" href="/">Shelf Life</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo02"
                 aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <!--{{#if logged_in}}-->
+                    <!--<li
+                            a /profile
+                         /profile>-->
+                    <!--{{else}}-->
                     <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="#">Sign Up</a>
+                        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+                            Sign Up!
+                        </button>
+                        <!-- <a class="nav-link active" aria-current="page" href="#">Sign Up</a> -->
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="#">Log In</a>
                     </li>
+                    <!--{{/if}}-->
                     <li class="nav-item">
                         <a class="nav-link" aria-disabled="false">Donate</a>
                     </li>
@@ -49,48 +58,21 @@
                     <div class="text-center text-white">
                         <!-- Page heading-->
                         <h1 class="mb-5">Welcome to Shelf Life! Search for a book!</h1>
-                        <!-- Signup form-->
-                        <!-- * * * * * * * * * * * * * * *-->
-                        <!-- * * SB Forms Contact Form * *-->
-                        <!-- * * * * * * * * * * * * * * *-->
-                        <!-- This form is pre-integrated with SB Forms.-->
-                        <!-- To make this form functional, sign up at-->
-                        <!-- https://startbootstrap.com/solution/contact-forms-->
-                        <!-- to get an API token!-->
+                        
+                        <!--TODO: Search class + ID names for CSS conflicts and CHANGE-->
                         <form class="form-subscribe" id="contactForm" data-sb-form-api-token="API_TOKEN">
-                            <!-- Email address input-->
+                            <!-- Search book catalogue-->
                             <div class="row">
                                 <div class="col">
                                     <input class="form-control form-control-lg" id="emailAddress" type="email"
                                         placeholder="Search a Book" data-sb-validations="required,email"
                                         data-sb-can-submit="no">
-                                    <!-- <div class="invalid-feedback text-white" data-sb-feedback="emailAddress:required">Email
-                                        Address is required.</div>
-                                    <div class="invalid-feedback text-white" data-sb-feedback="emailAddress:email">Email
-                                        Address Email is not valid.</div> -->
+                                    
                                 </div>
-                                <div class="col-auto"><button class="btn  btn-lg btn-outline-dark" id="submitButton"
-                                        type="submit">Submit</button></div>
+                                <div class="col-auto"><button class="btn btn-primary btn-lg" id="submitButton"
+                                        type="button">Submit</button></div>
                             </div>
-                            <!-- Submit success message-->
-                            <!---->
-                            <!-- This is what your users will see when the form-->
-                            <!-- has successfully submitted-->
-                            <div class="d-none" id="submitSuccessMessage">
-                                <div class="text-center mb-3">
-                                    <div class="fw-bolder">Form submission successful!</div>
-                                    <p>To activate this form, sign up at</p>
-                                    <a class="text-white"
-                                        href="https://startbootstrap.com/solution/contact-forms">https://startbootstrap.com/solution/contact-forms</a>
-                                </div>
-                            </div>
-                            <!-- Submit error message-->
-                            <!---->
-                            <!-- This is what your users will see when there is-->
-                            <!-- an error submitting the form-->
-                            <div class="d-none" id="submitErrorMessage">
-                                <div class="text-center text-danger mb-3">Error sending message!</div>
-                            </div>
+                        
                         </form>
                     </div>
                 </div>
@@ -141,29 +123,30 @@
                 <div class="col-lg-6 order-lg-2 text-white showcase-img"
                     style="background-image: url('/Users/nardge/Pictures/Background-images-and-projects/bg-retro1.png')"></div>
                 <div class="col-lg-6 order-lg-1 my-auto showcase-text">
-                    <h2>Fully Responsive Design</h2>
-                    <p class="lead mb-0">When you use a theme created by Start Bootstrap, you know that the theme will look
-                        great on any device, whether it's a phone, tablet, or desktop the page will behave responsively!</p>
+                    <h2>Free to join. Free to use!</h2>
+                    <p class="lead mb-0">
+                        Our platform is free to use and always will be. Sign up for free and start trading books with other users today!
+                    </p>
                 </div>
             </div>
             <div class="row g-0">
                 <div class="col-lg-6 text-white showcase-img" style="background-image: url('/Users/nardge/Pictures/Background-images-and-projects/bg-tiles.jpg')">
                 </div>
                 <div class="col-lg-6 my-auto showcase-text">
-                    <h2>Updated For Bootstrap 5</h2>
-                    <p class="lead mb-0">Newly improved, and full of great utility classes, Bootstrap 5 is leading the way
-                        in mobile responsive web development! All of the themes on Start Bootstrap are now using Bootstrap
-                        5!</p>
+                    <h2>Books a Plenty!</h2>
+                    <p class="lead mb-0">
+                        Our digital shelves are stocked with tons of used books from other users. Find the title you're looking for and start trading today!
+                    </p>
                 </div>
             </div>
             <div class="row g-0">
                 <div class="col-lg-6 order-lg-2 text-white showcase-img"
                     style="background-image: url('/Users/nardge/Pictures/Background-images-and-projects/bg-arrows.jpg')"></div>
                 <div class="col-lg-6 order-lg-1 my-auto showcase-text">
-                    <h2>Easy to Use &amp; Customize</h2>
-                    <p class="lead mb-0">Landing Page is just HTML and CSS with a splash of SCSS for users who demand some
-                        deeper customization options. Out of the box, just add your content and images, and your new landing
-                        page will be ready to go!</p>
+                    <h2>Easy to Use</h2>
+                    <p class="lead mb-0">
+                        Our platform is easy to use. Simply find the title you're looking for, agree to exchange with a book from your shelf, and send!
+                    </p>
                 </div>
             </div>
         </div>
@@ -205,55 +188,181 @@
             <div class="row justify-content-center">
                 <div class="col-xl-6">
                     <h2 class="mb-4">Ready to get started? Sign up now!</h2>
-                    <!-- Signup form-->
-                    <!-- * * * * * * * * * * * * * * *-->
-                    <!-- * * SB Forms Contact Form * *-->
-                    <!-- * * * * * * * * * * * * * * *-->
-                    <!-- This form is pre-integrated with SB Forms.-->
-                    <!-- To make this form functional, sign up at-->
-                    <!-- https://startbootstrap.com/solution/contact-forms-->
-                    <!-- to get an API token!-->
+                    
                     <form class="form-subscribe" id="contactFormFooter" data-sb-form-api-token="API_TOKEN">
-                        <!-- Email address input-->
+                        <!-- Sign Up Button-->
                         <div class="row">
-                            <div class="col">
-                                <input class="form-control form-control-lg" id="emailAddressBelow" type="email"
-                                    placeholder="Email Address" data-sb-validations="required,email"
-                                    data-sb-can-submit="no">
-                                <div class="invalid-feedback text-white" data-sb-feedback="emailAddressBelow:required">Email
-                                    Address is required.</div>
-                                <div class="invalid-feedback text-white" data-sb-feedback="emailAddressBelow:email">Email
-                                    Address Email is not valid.</div>
-                            </div>
-                            <div class="col-auto"><button class="btn btn-primary btn-lg disabled" id="submitButton"
-                                    type="submit">Submit</button></div>
+                            <div class="auto"><button class="btn btn-primary btn-lg" id="submitButton" data-bs-toggle="modal" data-bs-target="#staticBackdrop"
+                                    type="button">Get Started!</button></div>
                         </div>
-                        <!-- Submit success message-->
-                        <!---->
-                        <!-- This is what your users will see when the form-->
-                        <!-- has successfully submitted-->
-                        <div class="d-none" id="submitSuccessMessage">
-                            <div class="text-center mb-3">
-                                <div class="fw-bolder">Form submission successful!</div>
-                                <p>To activate this form, sign up at</p>
-                                <a class="text-white"
-                                    href="https://startbootstrap.com/solution/contact-forms">https://startbootstrap.com/solution/contact-forms</a>
-                            </div>
-                        </div>
-                        <!-- Submit error message-->
-                        <!---->
-                        <!-- This is what your users will see when there is-->
-                        <!-- an error submitting the form-->
-                        <div class="d-none" id="submitErrorMessage">
-                            <div class="text-center text-danger mb-3">Error sending message!</div>
-                        </div>
+
                     </form>
                 </div>
             </div>
         </div>
     </section>
     
+    <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+        aria-labelledby="staticBackdropLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="staticBackdropLabel">Sign Up for free!</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form class="row g-3 needs-validation" novalidate>
+                        <div class="col-md-4">
+                            <label for="validationCustom01" class="form-label">First name</label>
+                            <input type="text" class="form-control" id="fName-signup" value="" required>
+                            <div class="valid-feedback">
+                                Looks good!
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <label for="validationCustom02" class="form-label">Last name</label>
+                            <input type="text" class="form-control" id="validationCustom02" value="" required>
+                            <div class="valid-feedback">
+                                Looks good!
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <label for="validationCustom02" class="form-label">Email</label>
+                            <input type="email" class="form-control" id="validationCustom06" value="" required>
+                            <div class="valid-feedback">
+                                Looks good!
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <label for="validationCustomUsername" class="form-label">Username</label>
+                            <div class="input-group has-validation">
+                                <span class="input-group-text" id="inputGroupPrepend">@</span>
+                                <input type="text" class="form-control" id="validationCustomUsername"
+                                    aria-describedby="inputGroupPrepend" required>
+                                <div class="invalid-feedback">
+                                    Please choose a username.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <label for="validationCustom03" class="form-label">Password</label>
+                            <input type="password" class="form-control" id="validationCustom03" required>
+                            <div class="invalid-feedback">
+                                Please enter a password.
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <label for="validationCustom04" class="form-label">State</label>
+                            <select class="form-select" id="validationCustom04" required>
+                                <option selected  value="">Choose...</option>
+                                <option>
+                                    <option>Alabama</option>
+                                    <option>Alaska</option>
+                                    <option>Arizona</option>
+                                    <option>Arkansas</option>
+                                    <option>California</option>
+                                    <option>Colorado</option>
+                                    <option>Connecticut</option>
+                                    <option>Delaware</option>
+                                    <option>Florida</option>
+                                    <option>Georgia</option>
+                                    <option>Hawaii</option>
+                                    <option>Idaho</option>
+                                    <option>Illinois</option>
+                                    <option>Indiana</option>
+                                    <option>Iowa</option>
+                                    <option>Kansas</option>
+                                    <option>Kentucky</option>
+                                    <option>Louisiana</option>
+                                    <option>Maine</option>
+                                    <option>Maryland</option>
+                                    <option>Massachusetts</option>
+                                    <option>Michigan</option>
+                                    <option>Minnesota</option>
+                                    <option>Mississippi</option>
+                                    <option>Missouri</option>
+                                    <option>Montana</option>
+                                    <option>Nebraska</option>
+                                    <option>Nevada</option>
+                                    <option>New Hampshire</option>
+                                    <option>New Jersey</option>
+                                    <option>New Mexico</option>
+                                    <option>New York</option>
+                                    <option>North Carolina</option>
+                                    <option>North Dakota</option>
+                                    <option>Ohio</option>
+                                    <option>Oklahoma</option>
+                                    <option>Oregon</option>
+                                    <option>Pennsylvania</option>
+                                    <option>Rhode Island</option>
+                                    <option>South Carolina</option>
+                                    <option>South Dakota</option>
+                                    <option>Tennessee</option>
+                                    <option>Texas</option>
+                                    <option>Utah</option>
+                                    <option>Vermont</option>
+                                    <option>Virginia</option>
+                                    <option>Washington</option>
+                                    <option>West Virginia</option>
+                                    <option>Wisconsin</option>
+                                    <option>Wyoming</option>
+                                </option>
+                            </select>
+                            <div class="invalid-feedback">
+                                Please select a valid state.
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <label for="validationCustom05" class="form-label">Zip</label>
+                            <input type="text" class="form-control" id="validationCustom05" required>
+                            <div class="invalid-feedback">
+                                Please provide a valid zip.
+                            </div>
+                        </div>
+                        <div class="col-12">
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="" id="invalidCheck" required>
+                                <label class="form-check-label" for="invalidCheck">
+                                    Agree to terms and conditions
+                                </label>
+                                <div class="invalid-feedback">
+                                    You must agree before submitting.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12">
+                            <button class="btn btn-primary" type="submit">Submit form</button>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary">Understood</button>
+                </div>
+            </div>
+        </div>
+    </div>
 
+    <script>
+        (() => {
+            'use strict'
+
+            // Fetch all the forms we want to apply custom Bootstrap validation styles to
+            const forms = document.querySelectorAll('.needs-validation')
+
+            // Loop over them and prevent submission
+            Array.from(forms).forEach(form => {
+                form.addEventListener('submit', event => {
+                    if (!form.checkValidity()) {
+                        event.preventDefault()
+                        event.stopPropagation()
+                    }
+
+                    form.classList.add('was-validated')
+                }, false)
+            })
+        })()
+    </script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
             integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
             crossorigin="anonymous"></script>
