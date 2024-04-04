@@ -1,8 +1,8 @@
-const { Model, DataTypes } = require('sequelize');
-const sequelize = require('../config/connection');
-const bcrypt = require('bcrypt');
+const { Model, DataTypes } = require("sequelize");
+const sequelize = require("../config/connection");
+const bcrypt = require("bcrypt");
 
-class User extends Model { }
+class User extends Model {}
 
 User.init(
   {
@@ -15,8 +15,6 @@ User.init(
     firstName: {
       type: DataTypes.TEXT,
       allowNull: false,
-      primaryKey: true,
-      autoIncrement: true,
     },
     lastName: {
       type: DataTypes.STRING,
@@ -43,43 +41,28 @@ User.init(
       type: DataTypes.INTEGER,
       allowNull: false,
     },
-  },{
-
-
-
-
-
-
-
-    hooks: { 
-      beforeCreate: async (newUserData) => { newUserData.password = await bcrypt.hash(newUserData.password, 10); return newUserData; }, },  
-      beforeUpdate: async (updatedUserData) => { updatedUserData.email = await updatedUserData.email.toLowerCase(); return updatedUserData; }  
-
+  },
+  {
+    hooks: {
+      beforeCreate: async (newUserData) => {
+        newUserData.password = await bcrypt.hash(newUserData.password, 10);
+        return newUserData;
+      },
+    },
+    beforeCreate: async (newUserData) => {
+      newUserData.email = await newUserData.email.toLowerCase();
+      return newUserData;
+    },
+    beforeUpdate: async (updatedUserData) => {
+      updatedUserData.email = await updatedUserData.email.toLowerCase();
+      return updatedUserData;
+    },
+    sequelize,
+    timestamps: false,
+    freezeTableName: true,
+    underscored: true,
+    ModelName: "user"
   }
 )
-
-
-  
-
-//   sequelize,
-//   freezeTableName: true,
-//   underscored: true,
-//   modelName: 'user',
-// }
-// );
-
-
-  
-//     hooks: { 
-      
-//       beforeCreate: async (newUserData) => { newUserData.password.email = await bcrypt.hash(newUserData.password.email, 10); return newUserData; }, },
- 
-
-// beforeUpdate: async (updatedUserData) => {
-//   updatedUserData.email = await updatedUserData.email.toLowerCase();
-//   return updatedUserData;
-// }
-
-// {
 
 module.exports = User;
