@@ -15,6 +15,10 @@ Post.init(
         type: DataTypes.STRING,
         allowNull: false,
       },
+      post_content: {
+        type: DataTypes.STRING,
+        allowNull: false,
+      },
     user_id: {
         type: DataTypes.STRING,
         allowNull: false,
