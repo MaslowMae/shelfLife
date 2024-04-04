@@ -2,7 +2,7 @@ const { Model, DataTypes } = require('sequelize');
 const sequelize = require('../config/connection');
 const bcrypt = require('bcrypt');
 
-class User extends Model {}
+class User extends Model { }
 
 User.init(
   {
@@ -43,20 +43,43 @@ User.init(
       type: DataTypes.INTEGER,
       allowNull: false,
     },
-  },
-  {
-    hooks: { beforeCreate: async (newUserData) => { newUserData.password.email = await bcrypt.hash(newUserData.password.email, 10); return newUserData; }, },
-  },
-);
-  beforeUpdate: async (updatedUserData) => {
-    updatedUserData.email = await updatedUserData.email.toLowerCase();
-    return updatedUserData;
-  },
-  {
-  sequelize,
-  freezeTableName: true,
-  underscored: true,
-  modelName: 'user',
+  },{
+
+
+
+
+
+
+
+    hooks: { 
+      beforeCreate: async (newUserData) => { newUserData.password = await bcrypt.hash(newUserData.password, 10); return newUserData; }, },  
+      beforeUpdate: async (updatedUserData) => { updatedUserData.email = await updatedUserData.email.toLowerCase(); return updatedUserData; }  
+
   }
+)
+
+
+  
+
+//   sequelize,
+//   freezeTableName: true,
+//   underscored: true,
+//   modelName: 'user',
+// }
+// );
+
+
+  
+//     hooks: { 
+      
+//       beforeCreate: async (newUserData) => { newUserData.password.email = await bcrypt.hash(newUserData.password.email, 10); return newUserData; }, },
+ 
+
+// beforeUpdate: async (updatedUserData) => {
+//   updatedUserData.email = await updatedUserData.email.toLowerCase();
+//   return updatedUserData;
+// }
+
+// {
 
 module.exports = User;
