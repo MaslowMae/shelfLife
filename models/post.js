@@ -24,7 +24,7 @@ Post.init(
         },
       },
     book_id: {
-      type: DataTypes.TEXT,
+      type: DataTypes.INTEGER,
       allowNull: true,
       references: {
         model: 'book',
