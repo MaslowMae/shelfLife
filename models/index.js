@@ -1,7 +1,3 @@
-// const Driver = require('./Driver');
-// const License = require('./License');
-// const Car = require('./Car');
-
 const User = require('./User');
 const Post = require('./Post');
 const Comment = require('./Comment');
