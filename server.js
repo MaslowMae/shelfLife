@@ -1,33 +1,46 @@
-const express = require("express")
-const sequelize = require("./config/connection")
-const path = require("path")
-const exhb = require("express-handlebars")
-const hb = exhb.create({})
-const PORT = process.env.PORT || 3000
-const routes = require("./controllers")
-const session = require("express-session")
-const app = express()
+const path = require('path');
+const express = require('express');
+const session = require('express-session');
+const exphbs = require('express-handlebars');
+const routes = require('./controllers');
+const helpers = require('./utils/helpers');
 
-app.use(express.json())
-app.use(express.urlencoded({extended:true}))
-app.use(express.static(path.join(__dirname,"public")))
-app.use(routes)
-app.engine("hanldebars", hb.engine)
-app.set("view engine", "handlebars")
+const sequelize = require('./config/connection');
+const SequelizeStore = require('connect-session-sequelize')(session.Store);
 
-const sess ={
-    secret:"Super secret secret",
-    resave:true,
-    saveUninitilize: true
-}
-app.use(session(sess))
+const app = express();
+const PORT = process.env.PORT || 3001;
 
-sequelize.sync({force:false}).then(()=>{
-    app.listen(PORT, ()=>{
-        console.log(`listening on PORT ${PORT}`)
-    })
-})
+// Set up Handlebars.js engine with custom helpers
+const hbs = exphbs.create({ helpers });
 
+const sess = {
+  secret: 'Super secret secret',
+  cookie: {
+    maxAge: 300000,
+    httpOnly: true,
+    secure: false,
+    sameSite: 'strict',
+  },
+  resave: false,
+  saveUninitialized: true,
+  store: new SequelizeStore({
+    db: sequelize
+  })
+};
 
+app.use(session(sess));
 
+// Inform Express.js on which template engine to use
+app.engine('handlebars', hbs.engine);
+app.set('view engine', 'handlebars');
 
+app.use(express.json());
+app.use(express.urlencoded({ extended: true }));
+app.use(express.static(path.join(__dirname, 'public')));
+
+app.use(routes);
+
+sequelize.sync({ force: false }).then(() => {
+  app.listen(PORT, () => console.log('Now listening'));
+});

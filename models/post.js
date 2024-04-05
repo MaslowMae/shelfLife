@@ -15,12 +15,20 @@ Post.init(
         type: DataTypes.STRING,
         allowNull: false,
       },
+<<<<<<< HEAD
     post_content: {
         type: DataTypes.STRING,
         allowNull: false,
       },
     user_id: {
+=======
+      post_content: {
+>>>>>>> main
         type: DataTypes.STRING,
+        allowNull: false,
+      },
+    user_id: {
+        type: DataTypes.INTEGER,
         allowNull: false,
         references: {
           model: 'user',
