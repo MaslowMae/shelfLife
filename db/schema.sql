@@ -1,5 +1,5 @@
-CREATE DATABASE shelfie.db;
-USE shelfie.db;
+CREATE DATABASE shelfie_db;
+USE shelfie_db;
 
 -- --users come to the site, sign in and create posts about books. 
 -- CREATE TABLE users (

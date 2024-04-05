@@ -28,7 +28,7 @@ async function fetchBookCoverByISBN(isbn, apiKey) {
 }
 
 // Example usage
-const isbn = `${ISBN}`;
+const isbn = `${isbn}`;
 fetchBookCoverByISBN(isbn, apiKey)
     .then(coverImageURL => {
         console.log('Cover image URL:', coverImageURL);
