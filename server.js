@@ -58,12 +58,12 @@ app.post('/signup', async (req, res) => {
           zipcode
       });
 
-      // Return success response
-      res.status(201).json(newUser);
+    // Send a success response back to the client
+    res.status(201).json(newUser);
   } catch (error) {
-      // Return error response
-      console.error('Error creating user:', error);
-      res.status(500).json({ error: 'Failed to create user' });
+    // If an error occurs, send an error response back to the client
+    console.error('Error creating user:', error);
+    res.status(500).json({ error: 'Failed to create user' });
   }
 });
 
