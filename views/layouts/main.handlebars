@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -12,6 +13,7 @@
     <link rel="stylesheet" href="./css/style.css">
     <title>Shelf Life</title>
 </head>
+
 <body>
     <nav class="navbar navbar-expand-lg bg-body-tertiary">
         <div class="container-fluid">
@@ -23,6 +25,7 @@
             </button>
             <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <!-- Include sign-up modal button -->
                     {{#if logged_in}}
                     <li class="nav-item">
                         <a class="nav-link active" aria-current="page" href="/profile">Profile</a>
@@ -61,7 +64,7 @@
                     <div class="text-center text-white">
                         <!-- Page heading-->
                         <h1 class="mb-5">Welcome to Shelf Life! Search for a book!</h1>
-    
+
                         <!--TODO: Search class + ID names for CSS conflicts and CHANGE-->
                         <form class="form-subscribe" id="contactForm" data-sb-form-api-token="API_TOKEN">
                             <!-- Search book catalogue-->
@@ -70,12 +73,12 @@
                                     <input class="form-control form-control-lg" id="emailAddress" type="email"
                                         placeholder="Search a Book" data-sb-validations="required,email"
                                         data-sb-can-submit="no">
-    
+
                                 </div>
                                 <div class="col-auto"><button class="btn btn-primary btn-lg" id="submitButton"
                                         type="button">Submit</button></div>
                             </div>
-    
+
                         </form>
                     </div>
                 </div>
@@ -92,5 +95,7 @@
     {{#if logged_in}}
     <script src="/js/logout.js"></script>
     {{/if}}
+    <script src="/public/search.js"></script>
 </body>
+
 </html>
