@@ -4,9 +4,9 @@ let headers = {
     "Content-Type": 'application/json',
     "Authorization": '52718_071571f9f35dd848540253f953c137d9'
 }
-
 const axios = require('axios');
 const apiKey = '52718_071571f9f35dd848540253f953c137d9'
+
 // Function to fetch book cover by ISBN
 async function fetchBookCoverByISBN(isbn, apiKey) {
     try {
@@ -28,7 +28,7 @@ async function fetchBookCoverByISBN(isbn, apiKey) {
 }
 
 // Example usage
-const isbn = 'YOUR_BOOK_ISBN';
+const isbn = `${ISBN}`;
 fetchBookCoverByISBN(isbn, apiKey)
     .then(coverImageURL => {
         console.log('Cover image URL:', coverImageURL);
@@ -40,7 +40,6 @@ fetchBookCoverByISBN(isbn, apiKey)
 
 
 // GET / book / `${ISBN}` HTTP / 1.1
-
 // fetch('https://api2.isbndb.com/book/9781934759486', {headers: headers})
 //     .then(response =&gt; {
 //         return response.json();

@@ -11,11 +11,8 @@ Comment.init(
       primaryKey: true,
       autoIncrement: true,
     },
-    postTopic: {
-      type: DataTypes.TEXT,
-      allowNull: false,
-    },
-    postBody: {
+  
+    commentBody: {
       type: DataTypes.STRING,
       allowNull: false,
     },
