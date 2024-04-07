@@ -6,34 +6,35 @@
                 <h1 class="modal-title fs-5" id="staticBackdropLabel">Sign Up for free!</h1>
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
+
             <div class="modal-body">
-                <form class="row g-3 needs-validation form signup-form" novalidate>
+                <form action="/signup" method="post" class="row g-3 needs-validation form signup-form" novalidate>
                     <div class="col-md-4">
                         <label for="validationCustom01" class="form-label">First name</label>
-                        <input type="text" class="form-control" id="fName-signup" value="" required>
+                        <input type="text" class="form-control" id="fName-signup" name="firstName" value="" required>
                         <div class="valid-feedback">
                             Looks good!
                         </div>
                     </div>
                     <div class="col-md-4">
                         <label for="validationCustom02" class="form-label">Last name</label>
-                        <input type="text" class="form-control" id="lName-signup" value="" required>
+                        <input type="text" class="form-control" id="lName-signup" name="lastName" value="" required>
                         <div class="valid-feedback">
                             Looks good!
                         </div>
                     </div>
                     <div class="col-md-4">
                         <label for="validationCustom02" class="form-label">Email</label>
-                        <input type="email" class="form-control" id="email-signup" value="" required>
+                        <input type="email" class="form-control" id="email-signup" name="email" value="" required>
                         <div class="valid-feedback">
                             Looks good!
-                        </div>   
+                        </div>
                     </div>
                     <div class="col-md-4">
                         <label for="validationCustomUsername" class="form-label">Username</label>
                         <div class="input-group has-validation">
                             <span class="input-group-text" id="inputGroupPrepend">@</span>
-                            <input type="text" class="form-control" id="user-signup"
+                            <input type="text" class="form-control" id="user-signup" name="username"
                                 aria-describedby="inputGroupPrepend" required>
                             <div class="invalid-feedback">
                                 Please choose a username.
@@ -79,10 +80,6 @@
                         <button class="btn btn-primary" type="submit">Submit form</button>
                     </div>
                 </form>
-            </div>
-            <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                <button type="button" class="btn btn-primary">Understood</button>
             </div>
         </div>
     </div>

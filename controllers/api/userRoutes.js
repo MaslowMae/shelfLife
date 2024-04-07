@@ -1,3 +1,4 @@
+const express = require('express');
 const router = require('express').Router();
 const { User } = require('../../models');
 
@@ -41,8 +42,30 @@ router.post('/logout', (req, res) => {
         res.status(404).end();
     }
 });
-
-
-
+// handle sign up route
+router.post('/signup', async (req, res) => {
+    try {
+        // Extract form data from request body
+        const { firstName, lastName, username, email, password, state, zipcode } = req.body;
+  
+        // Create a new user using Sequelize model
+        const newUser = await User.create({
+            firstName,
+            lastName,
+            username,
+            email,
+            password,
+            state,
+            zipcode
+        });
+  
+      // Send a success response back to the client
+      res.status(201).json({ message: 'User created successfully', user: newUser });
+    } catch (error) {
+      // If an error occurs, send an error response back to the client
+      console.error('Error creating user:', error);
+      res.status(500).json({ error: 'Failed to create user' });
+    }
+  });
 
 module.exports = router;
