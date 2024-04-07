@@ -20,6 +20,13 @@ Post.init(
         allowNull: false,
       },
     user_id: {
+=======
+      post_content: {
+>>>>>>> main
+        type: DataTypes.STRING,
+        allowNull: false,
+      },
+    user_id: {
         type: DataTypes.INTEGER,
         allowNull: false,
         references: {
@@ -35,6 +42,7 @@ Post.init(
         key: 'id',
       },
     },
+  
   },
   {
     sequelize,
