@@ -4,8 +4,8 @@ const bcrypt = require("bcrypt");
 
 class User extends Model {}
 
-User.init(
-  {
+User.init( {
+
     id: {
       type: DataTypes.INTEGER,
       allowNull: false,
@@ -47,22 +47,25 @@ User.init(
       beforeCreate: async (newUserData) => {
         newUserData.password = await bcrypt.hash(newUserData.password, 10);
         return newUserData;
-      },
     },
     beforeCreate: async (newUserData) => {
       newUserData.email = await newUserData.email.toLowerCase();
       return newUserData;
     },
     beforeUpdate: async (updatedUserData) => {
-      updatedUserData.email = await updatedUserData.email.toLowerCase();
+    if (updatedUserData.email) {
+      updatedUserData.email = updatedUserData.email.toLowerCase();
       return updatedUserData;
-    },
+    }
+    return updatedUserData;
+  },
+},
     sequelize,
-    timestamps: false,
+    timestamps: true,
     freezeTableName: true,
     underscored: true,
-    ModelName: "user"
+    modelName: "user"
   }
-)
+);
 
 module.exports = User;
