@@ -12,28 +12,21 @@ Post.init(
       autoIncrement: true,
     },
     postTitle: {
-        type: DataTypes.STRING,
-        allowNull: false,
-      },
+      type: DataTypes.STRING,
+      allowNull: false,
+    },
     post_content: {
-        type: DataTypes.STRING,
-        allowNull: false,
-      },
+      type: DataTypes.STRING,
+      allowNull: false,
+    },
     user_id: {
-=======
-      post_content: {
->>>>>>> main
-        type: DataTypes.STRING,
-        allowNull: false,
+      type: DataTypes.INTEGER,
+      allowNull: false,
+      references: {
+        model: 'user',
+        key: 'id',
       },
-    user_id: {
-        type: DataTypes.INTEGER,
-        allowNull: false,
-        references: {
-          model: 'user',
-          key: 'id',
-        },
-      },
+    },
     book_id: {
       type: DataTypes.INTEGER,
       allowNull: true,
@@ -42,7 +35,6 @@ Post.init(
         key: 'id',
       },
     },
-  
   },
   {
     sequelize,
