@@ -41,32 +41,6 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 app.use(routes);
 
-// handle sign up route
-app.post('/signup', async (req, res) => {
-  try {
-      // Extract form data from request body
-      const { firstName, lastName, email, password } = req.body;
-
-      // Create a new user using Sequelize model
-      const newUser = await User.create({
-          firstName,
-          lastName,
-          username,
-          email,
-          password,
-          state,
-          zipcode
-      });
-
-    // Send a success response back to the client
-    res.status(201).json(newUser);
-  } catch (error) {
-    // If an error occurs, send an error response back to the client
-    console.error('Error creating user:', error);
-    res.status(500).json({ error: 'Failed to create user' });
-  }
-});
-
 //start server
 sequelize.sync({ force: false }).then(() => {
   app.listen(PORT, () => console.log('Now listening'));

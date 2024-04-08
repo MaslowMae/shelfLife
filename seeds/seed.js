@@ -1,3 +1,5 @@
+const seedDatabase = require('./seed');
+const express = require('express');
 const sequelize = require('../config/connection');
 const { User, Book, Post, Comment } = require('../models');
 
