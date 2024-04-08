@@ -17,12 +17,14 @@ User.init({
   firstName: {
     type: DataTypes.TEXT,
     allowNull: false,
-    name:"firstName"
+    name:"firstName",
+    field:"first_name"
   },
   lastName: {
     type: DataTypes.STRING,
     allowNull: false,
-    name:"lastName"
+    name:"lastName",
+    field:"last_name"
   },
   username: {
     type: DataTypes.STRING,
@@ -31,7 +33,7 @@ User.init({
   },
   email: {
     type: DataTypes.STRING,
-    allowNull: true,
+    allowNull: false,
     name:"email"
   },
   password: {
@@ -51,7 +53,7 @@ User.init({
     name:"zipcode"
   },
 },
-  {
+{
     hooks: {
       beforeCreate: async (newUserData) => {
         newUserData.password = await bcrypt.hash(newUserData.password, 10);
@@ -68,6 +70,7 @@ User.init({
         return updatedUserData;
       },
     },
+  
     sequelize,
     timestamps: true,
     freezeTableName: true,
