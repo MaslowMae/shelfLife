@@ -1,7 +1,10 @@
 // models/User.js
+const express = require('express');
+const router = express.Router();
 const { Model, DataTypes } = require("sequelize");
 const sequelize = require("../config/connection");
 const bcrypt = require("bcrypt");
+
 
 
 class User extends Model { }
@@ -16,41 +19,39 @@ User.init({
   },
   firstName: {
     type: DataTypes.TEXT,
-    allowNull: false,
-    name:"firstName",
-    field:"first_name"
+    
+
   },
   lastName: {
     type: DataTypes.STRING,
-    allowNull: false,
-    name:"lastName",
-    field:"last_name"
+  
+  
   },
   username: {
     type: DataTypes.STRING,
     allowNull: false,
-    name:"username"
+   
   },
   email: {
     type: DataTypes.STRING,
     allowNull: false,
-    name:"email"
+   
   },
   password: {
     type: DataTypes.STRING,
     allowNull: false,
     validate: { len: [8] },
-    name:"password"
+   
   },
   state: {
     type: DataTypes.STRING,
     allowNull: false,
-    name:"state"
+   
   },
   zipcode: {
     type: DataTypes.INTEGER,
     allowNull: false,
-    name:"zipcode"
+ 
   },
 },
 {
@@ -74,7 +75,7 @@ User.init({
     sequelize,
     timestamps: true,
     freezeTableName: true,
-    underscored: true,
+    // underscored: true,
     modelName: "user"
   }
 );

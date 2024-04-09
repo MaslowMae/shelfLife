@@ -1,16 +1,19 @@
 const express = require('express');
 const router = express.Router();
 const bcrypt = require('bcrypt');
-const { User } = require('../../models/User');
+const { User } = require('../../models');
 
 // handle sign up route
 router.post('/signup', async (req, res) => {
+
+    console.log("Hello I'm Brittany")
+    console.log(req.body)
     try {
         // Extract form data from request body
         const { firstName, lastName, username, email, password, state, zipcode } = req.body;
         
         //hashing password
-        const hashedPassword = await bcrypt.hash(password, 10);
+        // const hashedPassword = await bcrypt.hash(password, 10);
 
         // Create a new user using Sequelize model
         const newUser = await User.create({
@@ -18,7 +21,8 @@ router.post('/signup', async (req, res) => {
             lastName,
             username,
             email,
-            password: hashedPassword, //stored hashed password
+            password,
+            // password: hashedPassword, //stored hashed password
             state,
             zipcode
         });
@@ -31,6 +35,9 @@ router.post('/signup', async (req, res) => {
         res.status(500).json({ error: 'Failed to create user' });
     }
     });
+
+
+
     // log in route
     router.post('/login', async (req, res) => {
         try {
