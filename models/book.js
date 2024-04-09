@@ -1,5 +1,7 @@
-const { Model, DataTypes } = require("sequelize");
-const sequelize = require("../config/connection");
+
+const { Model, DataTypes } = require('sequelize');
+const sequelize = require('../config/connection');
+const axios = require('axios');
 
 class Book extends Model {}
 
@@ -27,12 +29,16 @@ Book.init(
       type: DataTypes.BIGINT,
       allowNull: true,
     },
+    coverImageURL: {
+      type: DataTypes.STRING, // Assuming cover image URL is a string
+      allowNull: true // Allow null if cover image URL is optional
+    },
   },
   {
     sequelize,
     timestamps: false,
     freezeTableName: true,
-    modelName: "book",
+    modelName: 'book',
   }
 );
 

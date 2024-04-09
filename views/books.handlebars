@@ -1,4 +1,25 @@
 
+{{!-- <<<<<<< HEAD
+<div class="">
+    {{#if coverImageURL}}
+    <img src="{{coverImageURL}}" alt="Book Cover">
+    {{else}}
+    <p>No cover image available</p>
+    {{/if}}
+</div>
+<hr>
+<div class="">
+    <h2>Posts about {{bookTitle}}</h2>
+    <p>{{Author}}</p>
+    <p>{{Genre}}</p>
+  {{#if posts.length}}
+  <ul class="">
+    {{#each posts}}
+    <li class="">
+      <p>{{this.content}}</p>
+      <p>By: {{this.user.username}}</p>
+    </li>
+    {{/each}}
 
 
 <!--This page needs to be a table-->

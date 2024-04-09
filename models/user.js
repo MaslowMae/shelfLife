@@ -5,8 +5,6 @@ const { Model, DataTypes } = require("sequelize");
 const sequelize = require("../config/connection");
 const bcrypt = require("bcrypt");
 
-
-
 class User extends Model { }
 
 User.init({
@@ -20,7 +18,6 @@ User.init({
   firstName: {
     type: DataTypes.TEXT,
     
-
   },
   lastName: {
     type: DataTypes.STRING,
@@ -75,7 +72,6 @@ User.init({
     sequelize,
     timestamps: true,
     freezeTableName: true,
-    // underscored: true,
     modelName: "user"
   }
 );
