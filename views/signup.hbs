@@ -6,7 +6,14 @@
                 <h1 class="modal-title fs-5" id="staticBackdropLabel">Sign Up for free!</h1>
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
-
+            <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+                aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h1 class="modal-title fs-5" id="staticBackdropLabel">Sign Up for free!</h1>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
             <form action="/signup" method="POST" class="modal-body needs-validation" novalidate>
                 <form class="row g-3">
                     <div class="col-md-4">
@@ -118,6 +125,21 @@
                     <div class="col-12">
                         <button class="btn btn-primary" type="submit">Submit</button>
                         <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Nevermind</button>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+            <div class="modal-body">
+                <form class="row g-3 needs-validation form signup-form" novalidate>
+                    <div class="col-md-4">
+                        <label for="validationCustom01" class="form-label">First name</label>
+                        <input type="text" class="form-control" id="fName-signup" value="" required>
+                        <div class="valid-feedback">
+                            Looks good!                    </div>
+                    <div class="col-md-4">
+                        <label for="validationCustom02" class="form-label">Last name</label>
+                        <input type="text" class="form-control" id="lName-signup" value="" required>
+                        <div class="valid-feedback">
+                            Looks good!
+                        </div>
                     </div>
                 </div>
             </form>
