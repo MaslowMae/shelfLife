@@ -27,9 +27,7 @@ router.post("/signup", async (req, res) => {
     });
 
     // Send a success response
-    res
-      .status(201)
-      .json({ message: "User created successfully", user: newUser });
+    res.redirect("main", newUser);
   } catch (error) {
     // If an error occurs, send an error response
     console.error("failed to create user:", error);
