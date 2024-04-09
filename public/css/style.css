@@ -188,6 +188,8 @@ p {
   z-index: 1;
   font-weight: bold;
   transition: all 0.4s ease-in-out;
+  background-color: rgb(5, 25, 87);
+  border: none;
 }
 #signUp-btn:hover {
   color: black;
