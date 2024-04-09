@@ -1,5 +1,5 @@
 const router = require("express").Router();
-const { Book, Post } = require("../../models");
+const { Book, Post, Comment } = require("../../models");
 
 router.get("/:id", async (req, res) => {
   try {
@@ -18,13 +18,15 @@ router.get("/:id", async (req, res) => {
   }
 });
 
-router.post("/books/post", async (req, res) => {
+router.post("/post", async (req, res) => {
   try {
-    const bookData = await Post.create(req.body, {
-      comment: req.body.comment,
+    const newBook = await Book.create({
+      bookTitle: req.body.bookTitle,
+      Author: req.body.Author,
+      Genre: req.body.Genre,
     });
-    bookData.push(req.body);
-    res.render("books", bookData.dataValues);
+    console.log(newBook);
+    res.render("books", newBook.dataValues);
   } catch (err) {
     res.status(500).json(err);
   }
