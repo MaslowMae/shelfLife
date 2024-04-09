@@ -1,0 +1,29 @@
+{
+  "bookTitle": "The Tempest",
+  "Author": "Mary Lovell",
+  "Genre": "novel",
+  "!-- Picture from API --": "",
+  "else": "",
+  "posts": [
+    {
+      "content": "love this book",
+      "user": {
+        "username": "nardge"
+      }
+    },
+    {
+      "content": "OMG Same!!!",
+      "user": {
+        "username": "jessica"
+      },
+      "comments": [
+        {
+          "content": "I know right",
+          "user": {
+            "username": "nardge2"
+          }
+          
+    }
+  ]
+
+    }]}
