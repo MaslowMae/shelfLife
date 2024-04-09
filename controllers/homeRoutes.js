@@ -6,7 +6,7 @@ const { Post, Book } = require("../models");
 router.get("/", async (req, res) => {
   try {
     // Fetch posts or perform any necessary logic to display main page
-    res.render("main");
+    res.render("homepage");
   } catch (err) {
     res.status(500).json({ error: "Internal Server Error" });
   }
