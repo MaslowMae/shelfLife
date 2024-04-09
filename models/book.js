@@ -1,3 +1,4 @@
+
 const { Model, DataTypes } = require('sequelize');
 const sequelize = require('../config/connection');
 const axios = require('axios');
@@ -13,9 +14,9 @@ Book.init(
       autoIncrement: true,
     },
     bookTitle: {
-        type: DataTypes.STRING,
-        allowNull: false,
-      },
+      type: DataTypes.STRING,
+      allowNull: false,
+    },
     Author: {
       type: DataTypes.STRING,
       allowNull: false,
