@@ -34,7 +34,6 @@ User.hasMany(Comment, {
   onDelete: 'CASCADE',
 });
 
-<<<<<<< HEAD
 Comment.belongsTo(User, {
   foreignKey: 'user_id',
 
@@ -52,6 +51,3 @@ Comment.belongsTo(User, {
 // });
 
 module.exports = { User, Post, Comment, Book };
-=======
-module.exports = { User, Post, Comment, Book} ;
->>>>>>> dc2251a33489e178b73c6eff2d0c68daa25fe3ef
