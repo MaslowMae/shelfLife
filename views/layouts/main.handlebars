@@ -36,13 +36,15 @@
                     {{else}}
                     <li class="nav-item">
                         <button type="button" class="btn btn-primary" data-bs-toggle="modal"
-                            data-bs-target="#staticBackdrop">
+                            data-bs-target="#staticBackdrop" href="/signup">
                             Sign Up!
                         </button>
                         <!-- <a class="nav-link active" aria-current="page" href="#">Sign Up</a> -->
                     </li>
+
+                    {{!-- //took out href="#"  --}}
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Log In</a>
+                        <a class="nav-link" href="/login">Log In</a>
                     </li>
                     {{/if}}
                     <li class="nav-item">
@@ -94,6 +96,9 @@
     <!-- Render script for logged in users only -->
     {{#if logged_in}}
     <script src="/js/logout.js"></script>
+    //added script for if not logged in
+    {{else}}
+    <script src="/js/login.js"></script>
     {{/if}}
 <<<<<<< HEAD
 =======
