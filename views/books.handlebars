@@ -60,8 +60,12 @@
                 <div class="card bg-light">
                     <div class="card-body">
                         <!-- Comment form-->
-                        <form class="mb-4"><textarea class="form-control" rows="3"
-                                placeholder="Leave a comment!!"></textarea></form>
+                        <form class="mb-4"><textarea id="comment-input" class="form-control" rows="3"
+                                placeholder="Leave a comment!!"></textarea>
+                            <div class="d-flex justify-content-end mt-4">
+                                <button id="comment-form" class="btn btn-primary btn-sm" type="submit">Post Comment</button>
+                            </div>
+                                </form>
                         <!-- Comment with nested comments-->
                         {{#if posts.length}}
 
@@ -87,6 +91,7 @@
                 </div>
             </section>
         </div>
+        <script></script>
         <!-- Side widgets-->
         {{!-- <div class="col-lg-4">
             <!-- Search widget-->
