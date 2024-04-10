@@ -21,14 +21,14 @@
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
     />
-    <link rel="stylesheet" href="./css/landing.css" />
+    <link rel="stylesheet" href="../../css/landing.css" />
     <link rel="stylesheet" href="../../css/style.css" />
     <title>Shelf Life</title>
   </head>
 
-  <body>
+  {{!-- <body>
 
-    {{!-- <nav class="navbar navbar-expand-lg bg-body-tertiary">
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
       <div class="container-fluid">
         <!--href="/"-->
         <a id="title" class="navbar-brand berkshire-swash-regular" href="/">
@@ -59,40 +59,31 @@
               <!--<li
                                 a /profile
                              /profile>-->
-            {{else}}
-              <li class="nav-item">
-                <button
-                  id="signUp-btn"
-                  type="button"
-                  class="btn btn-primary oleo-script"
-                  data-bs-toggle="modal"
-                  data-bs-target="#staticBackdrop"
-                  href="/signup"
-                >
-                  Sign Up!
-                </button>
-                <!-- <a class="nav-link active" aria-current="page" href="#">Sign Up</a> -->
-              </li>
-
-              {{! //took out href="#"  }}
-              <li class="nav-item">
-                <a class="nav-link" href="/login">Log In</a>
-              </li>
-            {{/if}}
-            <li class="nav-item">
-              <a class="nav-link" aria-disabled="false">Donate</a>
-            </li>
-          </ul>
-
-          <!-- <form class="d-flex" role="search">
+                    {{else}}
+                    <li class="nav-item">
+                        <button type="button" class="btn btn-primary" data-bs-toggle="modal"
+                            data-bs-target="#staticBackdrop">
+                            Sign Up!
+                        </button>
+                        <!-- <a class="nav-link active" aria-current="page" href="#">Sign Up</a> -->
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{>login.hbs}}">Log In</a>
+                    </li>
+                    {{/if}}
+                    <li class="nav-item">
+                        <a class="nav-link" aria-disabled="false">Donate</a>
+                    </li>
+                </ul>
+                <!-- <form class="d-flex" role="search">
                         <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
                         <button class="btn btn-outline-success" type="submit">Search</button>
                     </form> -->
         </div>
       </div>
-    </nav>
+    </nav> --}}
 
-    <header class="masthead">
+   {{!-- <header class="masthead">
       <div id="bg-img" class="header">
         <h1> </h1>
       </div>
@@ -151,6 +142,6 @@
     {{/if}}
     <script src="/public/search.js"></script>
 
-  </body>
+  </body> 
 
 </html>
