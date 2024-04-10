@@ -1,6 +1,12 @@
+body {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
 header.masthead {
   position: relative;
-  background-color: #343a40;
+  background-color: #ffffff;
   background: url("/Users/nardge/Pictures/Background-images-and-projects/bg-tiles.jpg")
     no-repeat center center;
   background-size: cover;
@@ -219,7 +225,56 @@ p {
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
-  transform: translateY(-10rem);
+  margin: auto;
+  /* transform: translateY(-10rem); */
+}
+#su {
+  list-style: none;
+  text-align: end;
+}
+#su a {
+  text-decoration: none;
+  transition: all 0.3s ease-in-out;
+}
+#su a:hover {
+  font-size: 20px;
+  text-decoration: underline;
+}
+.login-page input,
+label {
+  margin-bottom: 5px;
+}
+.login-page {
+  min-height: 60vh;
+  padding: 20px;
+  border-radius: 10px;
+  background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS3le-gnWkVs2Ln6mNsxfDb409LIrMT3Zozpg&s);
+  background-position: right;
+  background-repeat: no-repeat;
+  background-size: contain;
+  /* box-shadow: 0px 0px 10px black, 0px 0px 10px black; */
+}
+.login-page label {
+  font-weight: bolder;
+}
+#login-sub {
+  transition: all 0.4s ease-in-out;
+}
+#login-sub:hover {
+  border-top-left-radius: 30%;
+  border-bottom-right-radius: 30%;
+  background-color: rgb(105, 223, 105);
+  border-color: transparent;
+}
+#books {
+  transition: all 0.2s ease-in-out;
+  margin: 5px;
+}
+
+#books:hover {
+  transform: translateY(-3px);
+  background-color: black !important;
+  color: white;
 }
 
 @keyframes rotate {
