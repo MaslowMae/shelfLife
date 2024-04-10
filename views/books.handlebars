@@ -1,3 +1,51 @@
+
+<nav class="navbar navbar-expand-lg bg-body-tertiary">
+  <div class="container-fluid">
+    <!--href="/"-->
+    <a id="title" class="navbar-brand berkshire-swash-regular" href="/">
+      <img id="bookimg" src="../../img/bookimg.gif" />
+      Shelf Life</a>
+    <button
+      class="navbar-toggler"
+      type="button"
+      data-bs-toggle="collapse"
+      data-bs-target="#navbarTogglerDemo02"
+      aria-controls="navbarTogglerDemo02"
+      aria-expanded="false"
+      aria-label="Toggle navigation"
+    >
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <!-- Include sign-up modal button -->
+        {{#if logged_in}}
+          <li class="nav-item">
+            <a
+              class="nav-link active"
+              aria-current="page"
+              href="/profile"
+            >Profile</a>
+          </li>
+          <!--<li
+                                a /profile
+                             /profile>-->
+        {{else}}
+          <li class="nav-item">
+            <button
+              id="signUp-btn"
+              type="button"
+              class="btn btn-primary oleo-script"
+              data-bs-toggle="modal"
+              data-bs-target="#staticBackdrop"
+              href="/signup"
+            >
+              Sign Up!
+            </button>
+            <!-- <a class="nav-link active" aria-current="page" href="#">Sign Up</a> -->
+          </li>
+
+
 {{!-- <<<<<<< HEAD
 <div class="">
     <h2>{{bookTitle}}</h2>
@@ -17,17 +65,41 @@
       <p>By: {{this.user.username}}</p>
     </li>
     {{/each}}
+=======
+          {{! //took out href="#"  }}
+          <li class="nav-item">
+            <a class="nav-link" href="/login">Log In</a>
+          </li>
+        {{/if}}
+        <li class="nav-item">
+          <a class="nav-link" aria-disabled="false">Donate</a>
+        </li>
 
+
+
+      <!-- <form class="d-flex" role="search">
+                        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                        <button class="btn btn-outline-success" type="submit">Search</button>
+                    </form> -->
+    </div>
+  </div>
+</nav>
+=======
   </ul>
     {{else}}
     <p>No posts yet!</p>
     {{/if}}
+
 
 </div> --}}
 =======
 <!--This page needs to be a table-->
 {{!-- >>>>>>> be815b8 (small comment) --}}
 <div class="container mt-5">
+    <div id="bg-img" class="header">
+    <h1> </h1>
+  </div>
+
     <div class="row">
         <div class="col-lg-8">
             <!-- Post content-->
