@@ -1,3 +1,4 @@
+
 <nav class="navbar navbar-expand-lg bg-body-tertiary">
   <div class="container-fluid">
     <!--href="/"-->
@@ -44,20 +45,18 @@
             <!-- <a class="nav-link active" aria-current="page" href="#">Sign Up</a> -->
           </li>
 
-<<<<<<< Updated upstream
+
 {{!-- <<<<<<< HEAD
 <div class="">
-    {{#if coverImageURL}}
-    <img src="{{coverImageURL}}" alt="Book Cover">
-    {{else}}
-    <p>No cover image available</p>
-    {{/if}}
+    <h2>{{bookTitle}}</h2>
+    <p>{{Author}}</p>
+    <p>{{Genre}}</p>
+    {{!-- Picture from API --}}
+
 </div>
 <hr>
 <div class="">
     <h2>Posts about {{bookTitle}}</h2>
-    <p>{{Author}}</p>
-    <p>{{Genre}}</p>
   {{#if posts.length}}
   <ul class="">
     {{#each posts}}
@@ -75,8 +74,8 @@
         <li class="nav-item">
           <a class="nav-link" aria-disabled="false">Donate</a>
         </li>
-      </ul>
->>>>>>> Stashed changes
+
+
 
       <!-- <form class="d-flex" role="search">
                         <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
@@ -85,9 +84,17 @@
     </div>
   </div>
 </nav>
+=======
+  </ul>
+    {{else}}
+    <p>No posts yet!</p>
+    {{/if}}
 
+
+</div> --}}
+=======
 <!--This page needs to be a table-->
-{{!--  (small comment) --}}
+{{!-- >>>>>>> be815b8 (small comment) --}}
 <div class="container mt-5">
     <div id="bg-img" class="header">
     <h1> </h1>
@@ -125,8 +132,12 @@
                 <div class="card bg-light">
                     <div class="card-body">
                         <!-- Comment form-->
-                        <form class="mb-4"><textarea class="form-control" rows="3"
-                                placeholder="Leave a comment!!"></textarea></form>
+                        <form class="mb-4"><textarea id="comment-input" class="form-control" rows="3"
+                                placeholder="Leave a comment!!"></textarea>
+                            <div class="d-flex justify-content-end mt-4">
+                                <button id="comment-form" class="btn btn-primary btn-sm" type="submit">Post Comment</button>
+                            </div>
+                                </form>
                         <!-- Comment with nested comments-->
                         {{#if posts.length}}
 
@@ -152,6 +163,7 @@
                 </div>
             </section>
         </div>
+        <script></script>
         <!-- Side widgets-->
         {{!-- <div class="col-lg-4">
             <!-- Search widget-->
