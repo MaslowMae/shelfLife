@@ -7,8 +7,14 @@ const axios = require('axios');
 // Display main page with search functionality
 router.get("/", async (req, res) => {
   try {
+    const bookData = await Book.findAll({
+      attributes: ["bookTitle", "Author"],
+      include: [{ model: Post, attributes: ["postTitle"] }],
+    });
+    const books = bookData.map((book) => book.get({ plain: true }));
+    console.log(books);
+    res.render("homepage", { books });
     // Fetch posts or perform any necessary logic to display main page
-    res.render("homepage");
   } catch (err) {
     res.status(500).json({ error: "Internal Server Error" });
   }
