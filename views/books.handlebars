@@ -1,17 +1,14 @@
-
 {{!-- <<<<<<< HEAD
 <div class="">
-    {{#if coverImageURL}}
-    <img src="{{coverImageURL}}" alt="Book Cover">
-    {{else}}
-    <p>No cover image available</p>
-    {{/if}}
+    <h2>{{bookTitle}}</h2>
+    <p>{{Author}}</p>
+    <p>{{Genre}}</p>
+    {{!-- Picture from API --}}
+
 </div>
 <hr>
 <div class="">
     <h2>Posts about {{bookTitle}}</h2>
-    <p>{{Author}}</p>
-    <p>{{Genre}}</p>
   {{#if posts.length}}
   <ul class="">
     {{#each posts}}
@@ -21,9 +18,15 @@
     </li>
     {{/each}}
 
+  </ul>
+    {{else}}
+    <p>No posts yet!</p>
+    {{/if}}
 
+</div> --}}
+=======
 <!--This page needs to be a table-->
-{{!--  (small comment) --}}
+{{!-- >>>>>>> be815b8 (small comment) --}}
 <div class="container mt-5">
     <div class="row">
         <div class="col-lg-8">
