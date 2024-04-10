@@ -1,8 +1,12 @@
 [
     {
-        "commentBody": "this is great and the best book i've ever read!"
+        "commentBody": "this is great and the best book i've ever read!",
+        "user_id": 1,
+        "post_id": 1
     },
     {
-        "commentBody": "this is bad and the worst book i've ever read!"
+        "commentBody": "this is bad and the worst book i've ever read!",
+        "user_id": 2,
+        "post_id": 2
     }
 ]
