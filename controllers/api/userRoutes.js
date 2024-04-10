@@ -4,7 +4,7 @@ const { User } = require("../../models");
 
 // handle sign up route
 router.post("/signup", async (req, res) => {
-  console.log("Hello I'm Brittany");
+  console.log("Hello");
   console.log(req.body);
   try {
     // Extract form data from request body
