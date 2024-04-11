@@ -4,7 +4,7 @@ const { User, Book, Post, Comment } = require("../models");
 router.get("/", async (req, res) => {
   try {
     const userData = await User.findAll({
-      attributes: ["username", "Email"],
+      attributes: ["username", "email"],
       include: [{ model: Post, attributes: ["postTitle"] }],
     });
     const posts = userData.map((user) => user.get({ plain: true }));

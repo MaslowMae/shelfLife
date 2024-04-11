@@ -4,8 +4,8 @@
     <li id="su"><a data-bs-toggle="modal" data-bs-target="#staticBackdrop" href="/signup" title="create your own account!">signup</a></li>
   </ul>
 <section class="login-page">
-  <form class="form login-form">
-    <div class="form-group">
+  <form action="/login" class="form login-form">
+    {{!-- <div class="form-group">
       <label for="username">Username</label>
       <input
         type="text"
@@ -14,7 +14,7 @@
         placeholder="enter your username"
         required
       />
-    </div>
+    </div> --}}
     <div class="form-group">
       <label for="email-login">Email</label>
       <label for="email-login">Email</label>
@@ -68,101 +68,43 @@
         ></button>
       </div>
       <div class="modal-body">
-        <form class="row g-3 needs-validation" novalidate>
-          <div class="col-md-4">
-            <label for="validationCustom01" class="form-label">First name</label>
-            <input
-              type="text"
-              class="form-control"
-              id="fName-signup"
-              name="firstName"
-              value=""
-              required
-            />
-            <div class="valid-feedback">
-              Looks good!
-            </div>
+        <form action="/api/users/signup" method="POST" class="row g-3 needs-validation form signup-form" novalidate>
+          {{!-- <div class="col-md-4">
+            <label for="fName-signup" class="form-label">First Name</label>
+            <input type="text" class="form-control" id="fName-signup" name="firstName" required>
+            <div class="valid-feedback">Looks good!</div>
           </div>
+        
           <div class="col-md-4">
-            <label
-              for="validationCustom02"
-              name="lastName"
-              class="form-label"
-            >Last name</label>
-            <input
-              type="text"
-              class="form-control"
-              id="validationCustom02"
-              value=""
-              required
-            />
-            <div class="valid-feedback">
-              Looks good!
-            </div>
-          </div>
+            <label for="lName-signup" class="form-label">Last Name</label>
+            <input type="text" class="form-control" id="lName-signup" name="lastName" required>
+            <div class="valid-feedback">Looks good!</div>
+          </div> --}}
+        
           <div class="col-md-4">
-            <label
-              for="validationCustom02"
-              name="email"
-              class="form-label"
-            >Email</label>
-            <input
-              type="email"
-              class="form-control"
-              id="validationCustom06"
-              value=""
-              required
-            />
-            <div class="valid-feedback">
-              Looks good!
-            </div>
-          </div>
-          <div class="col-md-4">
-            <label
-              for="validationCustomUsername"
-              name="username"
-              class="form-label"
-            >Username</label>
+            <label for="email-signup" class="form-label">Email</label>
             <div class="input-group has-validation">
               <span class="input-group-text" id="inputGroupPrepend">@</span>
-              <input
-                type="text"
-                class="form-control"
-                id="validationCustomUsername"
-                aria-describedby="inputGroupPrepend"
-                required
-              />
-              <div class="invalid-feedback">
-                Please choose a username.
-              </div>
+              <input type="text" class="form-control" id="email-signup" name="username" required>
+              <div class="invalid-feedback">Please choose a username.</div>
             </div>
           </div>
+          <div class="col-md-4">
+            <label for="username-signup" class="form-label">Username</label>
+            <input type="email" class="form-control" id="username-signup" name="email" required>
+            <div class="valid-feedback"> Looks good!</div>
+          </div>
+        
           <div class="col-md-6">
-            <label
-              for="validationCustom03"
-              name="password"
-              class="form-label"
-            >Password</label>
-            <input
-              type="password"
-              class="form-control"
-              id="validationCustom03"
-              required
-            />
-            <div class="invalid-feedback">
-              Please enter a password.
-            </div>
-          </div>
-          <div class="col-md-3">
-            <label for="validationCustom04" class="form-label">State</label>
-            <select
-              class="form-select"
-              name="state"
-              id="validationCustom04"
-              required
-            >
-              <option selected value="">Choose...</option>
-              <option>
+            <label for="password-signup" class="form-label">Password</label>
+            <input type="password" class="form-control" id="password-signup" name="password" required>
+            <div class="invalid-feedback">Please enter a valid password.</div>
+        
+            {{!-- <div class="col-md-3">
+              <label for="state-signup" class="form-label">State</label>
+              <select class="form-select" id="state-signup" name="state" required>
+                <option selected value="">Choose...</option>
+                <option>
                 <option>Alabama</option>
                 <option>Alaska</option>
                 <option>Arizona</option>
@@ -213,44 +155,28 @@
                 <option>West Virginia</option>
                 <option>Wisconsin</option>
                 <option>Wyoming</option>
-              </option>
-            </select>
-            <div class="invalid-feedback">
-              Please select a valid state.
+              </select>
+              <div class="invalid-feedback"> Please select a valid state.</div>
             </div>
-          </div>
-          <div class="col-md-3">
-            <label for="validationCustom05" class="form-label">Zip</label>
-            <input
-              type="text"
-              class="form-control"
-              name="zipcode"
-              id="validationCustom05"
-              required
-            />
-            <div class="invalid-feedback">
-              Please provide a valid zip.
-            </div>
-          </div>
-          <div class="col-12">
-            <div class="form-check">
-              <input
-                class="form-check-input"
-                type="checkbox"
-                value=""
-                id="invalidCheck"
-                required
-              />
-              <label class="form-check-label" for="invalidCheck">
-                Agree to terms and conditions
-              </label>
-              <div class="invalid-feedback">
-                You must agree before submitting.
+        
+            <div class="col-md-3">
+              <label for="zip-signup" class="form-label">Zip</label>
+              <input type="text" class="form-control" id="zip-signup" name="zip" required>
+              <div class="invalid-feedback">Please provide a valid zip.</div>
+            </div> --}}
+        
+            <div class="col-12">
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" value="" id="terms-check" required>
+                <label class="form-check-label" for="terms-check">Agree to terms and conditions</label>
+                <div class="invalid-feedback">You must agree before submitting.</div>
               </div>
             </div>
-          </div>
-          <div class="col-12">
-            <button class="btn btn-primary" type="submit">Submit form</button>
+            <a class="col-12">
+              <button class="btn btn-primary" type="submit">Submit</button>
+            </a>
+        
+            <a href="/"> <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Nevermind</button></a>
           </div>
         </form>
       </div>
@@ -273,5 +199,6 @@
 ></script>
 <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
 <script src="./search.js"></script>
+<script src="./js/signup.js"></script>
 
 <script src="./js/login.js"></script>
