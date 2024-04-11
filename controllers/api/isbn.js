@@ -41,6 +41,7 @@ async function fetchBookCoverByISBN(isbn, apiKey) {
 // Example usage
 const isbn = `${isbn}`;
 fetchBookCoverByISBN(isbn, apiKey)
+
   .then((coverImageURL) => {
     console.log("Cover image URL:", coverImageURL);
     // Use cover image URL as needed in your application
@@ -60,3 +61,13 @@ fetchBookCoverByISBN(isbn, apiKey)
 //     .catch(error =&gt; {
 //         console.error('Error:', error)
 //     });
+
+    .then(coverImageURL => {
+        console.log('Cover image URL:', coverImageURL);
+        // Use cover image URL as needed in your application
+    })
+    .catch(error => {
+        console.error('Error:', error);
+    });
+
+
