@@ -2,8 +2,8 @@
 
                 {{!-- <form action="/signup"  class="row g-3 needs-validation" novalidate> --}}
                 
-                <form class="row g-3 needs-validation form signup-form" novalidate>
-                    <div class="col-md-4">
+                <form method="POST" action="/api/users" class="row g-3 needs-validation form signup-form" novalidate>
+                    {{!-- <div class="col-md-4">
                         <label for="fName-signup" class="form-label">First Name</label>
                         <input type="text" class="form-control" id="fName-signup" name="firstName" required>
                         <div class="valid-feedback">Looks good!</div>
@@ -13,28 +13,28 @@
                         <label for="lName-signup" class="form-label">Last Name</label>
                         <input type="text" class="form-control" id="lName-signup" name="lastName" required>
                         <div class="valid-feedback">Looks good!</div>
-                    </div>
+                    </div> --}}
 
                     <div class="col-md-4">
-                        <label for="username-signup" class="form-label">Email</label>
+                        <label for="email-signup" class="form-label">Email</label>
                         <div class="input-group has-validation">
                             <span class="input-group-text" id="inputGroupPrepend">@</span>
-                            <input type="text" class="form-control" id="email-login" name="username" required>
+                            <input type="text" class="form-control" id="email-signup" name="email" required>
                             <div class="invalid-feedback">Please choose a username.</div>
                         </div>
                     </div>
                         <div class="col-md-4">
                             <label for="validationCustom02" class="form-label">Username</label>
-                            <input type="email" class="form-control" id="username-signup" name="email" required>
+                            <input type="email" class="form-control" id="username-signup" name="username" required>
                             <div class="valid-feedback"> Looks good!</div>
                         </div>
 
-                    <div class="col-md-6">
+                     <div class="col-md-6">
                         <label for="password-signup" class="form-label">Password</label>
                         <input type="password" class="form-control" id="password-signup" name="password" required>
                         <div class="invalid-feedback">Please enter a valid password.</div>
 
-                        <div class="col-md-3">
+                       {{!-- <div class="col-md-3">
                             <label for="state-signup" class="form-label">State</label>
                             <select class="form-select" id="state-signup" name="state" required>
                                 <option selected value="">Choose...</option>
@@ -105,7 +105,7 @@
                                 <label class="form-check-label" for="terms-check">Agree to terms and conditions</label>
                                 <div class="invalid-feedback">You must agree before submitting.</div>
                             </div>
-                        </div>
+                        </div> --}}
                         <a class="col-12">
                             <button class="btn btn-primary" type="submit">Submit</button>
                             </a>
@@ -118,6 +118,5 @@
         </div>
     </div>
     <div class="modal-footer"></div>
-    <script src="./js/signup">
-    
+<script src="../js/signup"></script>    
 

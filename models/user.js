@@ -13,12 +13,12 @@ User.init(
       primaryKey: true,
       autoIncrement: true,
     },
-    firstName: {
-      type: DataTypes.TEXT,
-    },
-    lastName: {
-      type: DataTypes.STRING,
-    },
+    // firstName: {
+    //   type: DataTypes.TEXT,
+    // },
+    // lastName: {
+    //   type: DataTypes.STRING,
+    // },
     username: {
       type: DataTypes.STRING,
       allowNull: false,
@@ -32,14 +32,14 @@ User.init(
       allowNull: false,
       validate: { len: [8] },
     },
-    state: {
-      type: DataTypes.STRING,
-      allowNull: false,
-    },
-    zipcode: {
-      type: DataTypes.INTEGER,
-      allowNull: false,
-    },
+    // state: {
+    //   type: DataTypes.STRING,
+    //   allowNull: false,
+    // },
+    // zipcode: {
+    //   type: DataTypes.INTEGER,
+    //   allowNull: false,
+    // },
   },
   {
     hooks: {
