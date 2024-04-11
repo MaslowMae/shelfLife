@@ -49,16 +49,3 @@ fetchBookCoverByISBN(isbn, apiKey)
         console.error('Error:', error);
     });
 
-
-
-// GET / book / `${ISBN}` HTTP / 1.1
-// fetch('https://api2.isbndb.com/book/9781934759486', {headers: headers})
-//     .then(response =&gt; {
-//         return response.json();
-//     })
-//     .then(json =&gt; {
-//         console.log(json)
-//     })
-//     .catch(error =&gt; {
-//         console.error('Error:', error)
-//     });
