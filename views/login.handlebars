@@ -1,6 +1,18 @@
 <ul>
+
   <li id="su"><a href="/signup" title="create your own account!">signup</a></li>
 </ul>
+
+<!--modal tied to sign-up link-->
+<ul>
+  <li id="su"><a
+      data-bs-toggle="modal"
+      data-bs-target="#staticBackdrop"
+      href="/signup"
+      title="create your own account!"
+    >signup</a></li>
+</ul>
+
 <section class="login-page">
   <form action="api/users/login" class="login-form">
     <div class="form-group">
@@ -38,6 +50,7 @@
         required
       />
     </div><br />
+    <!--REMEMBER ME-->
     <button type="submit" class="btn btn-primary" id="login-sub">Submit</button>
   </form>
 
