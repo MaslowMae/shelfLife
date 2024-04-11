@@ -1,15 +1,6 @@
-<div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
-    aria-labelledby="staticBackdropLabel" aria-hidden="true">
-    <div class="modal-dialog">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h1 class="modal-title fs-5" id="staticBackdropLabel">Sign Up for free!</h1>
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-            </div>
 
-            <div class="modal-body">
 
-                <form action="/signup" method="POST" class="row g-3 needs-validation" novalidate>
+                {{!-- <form action="/signup"  class="row g-3 needs-validation" novalidate> --}}
                 
                 <form class="row g-3 needs-validation form signup-form" novalidate>
                     <div class="col-md-4">
@@ -25,16 +16,16 @@
                     </div>
 
                     <div class="col-md-4">
-                        <label for="username-signup" class="form-label">Username</label>
+                        <label for="username-signup" class="form-label">Email</label>
                         <div class="input-group has-validation">
                             <span class="input-group-text" id="inputGroupPrepend">@</span>
-                            <input type="text" class="form-control" id="username-signup" name="username" required>
+                            <input type="text" class="form-control" id="email-login" name="username" required>
                             <div class="invalid-feedback">Please choose a username.</div>
                         </div>
                     </div>
                         <div class="col-md-4">
-                            <label for="validationCustom02" class="form-label">Email</label>
-                            <input type="email" class="form-control" id="validationCustom06" value="" required>
+                            <label for="validationCustom02" class="form-label">Username</label>
+                            <input type="email" class="form-control" id="username-signup" name="email" required>
                             <div class="valid-feedback"> Looks good!</div>
                         </div>
 
@@ -115,9 +106,11 @@
                                 <div class="invalid-feedback">You must agree before submitting.</div>
                             </div>
                         </div>
-                        <div class="col-12">
+                        <a class="col-12">
                             <button class="btn btn-primary" type="submit">Submit</button>
-                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Nevermind</button>
+                            </a>
+                           
+                           <a href="/"> <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Nevermind</button></a>
                         </div>
                     </form>
                 </div>
@@ -125,25 +118,6 @@
         </div>
     </div>
     <div class="modal-footer"></div>
-    </body>
+    <script src="./js/signup">
+    
 
-    <script>
-        (() => {
-            'use strict'
-
-            // Fetch all the forms we want to apply custom Bootstrap validation styles to
-            const forms = document.querySelectorAll('.needs-validation')
-
-            // Loop over them and prevent submission
-            Array.from(forms).forEach(form => {
-                form.addEventListener('submit', event => {
-                    if (!form.checkValidity()) {
-                        event.preventDefault()
-                        event.stopPropagation()
-                    }
-
-                    form.classList.add('was-validated')
-                }, false)
-            })
-        })()
-    </script>
