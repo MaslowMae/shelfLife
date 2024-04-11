@@ -1,10 +1,9 @@
-const express = require("express");
-const router = express.Router();
+const router = require("express").Router();
 const { User } = require("../../models");
 
 // handle sign up route
 router.post("/signup", async (req, res) => {
-  console.log("Hello I'm Brittany");
+  console.log("Hello");
   console.log(req.body);
   try {
     // Extract form data from request body
@@ -27,8 +26,16 @@ router.post("/signup", async (req, res) => {
     });
 
     // Send a success response
-    res.redirect("main", newUser);
+
+    res.send(200).json({ message: "success", user: newUser });
   } catch (error) {
+
+    res.status(200).json({
+      message: "Welcome to Shelfie!",
+      user: newUser,
+    })
+    } catch (error) {
+
     // If an error occurs, send an error response
     console.error("failed to create user:", error);
     res.status(500).json({ error: "Failed to create user" });

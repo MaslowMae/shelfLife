@@ -1,14 +1,18 @@
-const express = require("express");
-const router = express.Router();
-const { Post, Book } = require('../models');
-const axios = require('axios');
-
+const router = require("express").Router();
+const { Post, Book } = require("../models");
+// const axios = require('axios');
 
 // Display main page with search functionality
 router.get("/", async (req, res) => {
   try {
+    const bookData = await Book.findAll({
+      attributes: ["bookTitle", "Author"],
+      include: [{ model: Post, attributes: ["postTitle"] }],
+    });
+    const books = bookData.map((book) => book.get({ plain: true }));
+    console.log(books);
+    res.render("homepage", { books });
     // Fetch posts or perform any necessary logic to display main page
-    res.render("homepage");
   } catch (err) {
     res.status(500).json({ error: "Internal Server Error" });
   }
@@ -66,10 +70,11 @@ router.get("/login", (req, res) => {
   res.render("login");
 });
 router.get("/signup", (req, res) => {
-  if (req.session.logged_in) {
-    res.redirect("/");
-    return;
-  }
+  console.log("Signup");
+  // if (req.session.logged_in) {
+  //   res.redirect("/");
+  //   return;
+  // }
 
   res.render("signup");
 });

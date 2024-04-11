@@ -1,30 +1,56 @@
 
-{{!-- <<<<<<< HEAD
-<div class="">
-    {{#if coverImageURL}}
-    <img src="{{coverImageURL}}" alt="Book Cover">
-    {{else}}
-    <p>No cover image available</p>
-    {{/if}}
-</div>
-<hr>
-<div class="">
-    <h2>Posts about {{bookTitle}}</h2>
-    <p>{{Author}}</p>
-    <p>{{Genre}}</p>
-  {{#if posts.length}}
-  <ul class="">
-    {{#each posts}}
-    <li class="">
-      <p>{{this.content}}</p>
-      <p>By: {{this.user.username}}</p>
-    </li>
-    {{/each}}
+<nav class="navbar navbar-expand-lg bg-body-tertiary">
+  <div class="container-fluid">
+    <!--href="/"-->
+    <a id="title" class="navbar-brand berkshire-swash-regular" href="/">
+      <img id="bookimg" src="../../img/bookimg.gif" />
+      Shelf Life</a>
+    <button
+      class="navbar-toggler"
+      type="button"
+      data-bs-toggle="collapse"
+      data-bs-target="#navbarTogglerDemo02"
+      aria-controls="navbarTogglerDemo02"
+      aria-expanded="false"
+      aria-label="Toggle navigation"
+    >
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <!-- Include sign-up modal button -->
+        {{#if logged_in}}
+          <li class="nav-item">
+            <a
+              class="nav-link active"
+              aria-current="page"
+              href="/profile"
+            >Profile</a>
+          </li>
+          <!--<li
+                                a /profile
+                             /profile>-->
+        {{else}}
+          <li class="nav-item">
+            <button
+              id="signUp-btn"
+              type="button"
+              class="btn btn-primary oleo-script"
+              data-bs-toggle="modal"
+              data-bs-target="#staticBackdrop"
+              href="/signup"
+            >
+              Sign Up!
+            </button>
+            <!-- <a class="nav-link active" aria-current="page" href="#">Sign Up</a> -->
+          </li>
 
 
-<!--This page needs to be a table-->
-{{!--  (small comment) --}}
 <div class="container mt-5">
+    <div id="bg-img" class="header">
+    <h1> </h1>
+  </div>
+
     <div class="row">
         <div class="col-lg-8">
             <!-- Post content-->
@@ -57,8 +83,12 @@
                 <div class="card bg-light">
                     <div class="card-body">
                         <!-- Comment form-->
-                        <form class="mb-4"><textarea class="form-control" rows="3"
-                                placeholder="Leave a comment!!"></textarea></form>
+                        <form class="mb-4"><textarea id="comment-input" class="form-control" rows="3"
+                                placeholder="Leave a comment!!"></textarea>
+                            <div class="d-flex justify-content-end mt-4">
+                                <button id="comment-form" class="btn btn-primary btn-sm" type="submit">Post Comment</button>
+                            </div>
+                                </form>
                         <!-- Comment with nested comments-->
                         {{#if posts.length}}
 
@@ -71,7 +101,6 @@
                                 <div class="fw-bold">{{this.user.username}}</div>
                                 {{this.content}}
                                 <!-- Child comment 1-->
-                                
                             </div>
                             {{/each}}
                         </div>
@@ -84,47 +113,4 @@
                 </div>
             </section>
         </div>
-        <!-- Side widgets-->
-        {{!-- <div class="col-lg-4">
-            <!-- Search widget-->
-            <div class="card mb-4">
-                <div class="card-header">Search</div>
-                <div class="card-body">
-                    <div class="input-group">
-                        <input class="form-control" type="text" placeholder="Enter search term..."
-                            aria-label="Enter search term..." aria-describedby="button-search">
-                        <button class="btn btn-primary" id="button-search" type="button">Go!</button>
-                    </div>
-                </div>
-            </div>
-            <!-- Categories widget-->
-            <div class="card mb-4">
-                <div class="card-header">Categories</div>
-                <div class="card-body">
-                    <div class="row">
-                        <div class="col-sm-6">
-                            <ul class="list-unstyled mb-0">
-                                <li><a href="#!">Web Design</a></li>
-                                <li><a href="#!">HTML</a></li>
-                                <li><a href="#!">Freebies</a></li>
-                            </ul>
-                        </div>
-                        <div class="col-sm-6">
-                            <ul class="list-unstyled mb-0">
-                                <li><a href="#!">JavaScript</a></li>
-                                <li><a href="#!">CSS</a></li>
-                                <li><a href="#!">Tutorials</a></li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <!-- Side widget-->
-            <div class="card mb-4">
-                <div class="card-header">Side Widget</div>
-                <div class="card-body">You can put anything you want inside of these side widgets. They are easy to use,
-                    and feature the Bootstrap 5 card component!</div>
-            </div>
-        </div>
-    </div> --}}
 </div>
