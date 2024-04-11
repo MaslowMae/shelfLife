@@ -1,29 +1,19 @@
 [
     {
-        "firstName": "John",
-        "lastName": "Doe",
         "username": "johndoe",
         "email": "johndoe@email.com",
-        "password": "password",
-        "state": "FL",
-        "zipcode": 32828
+        "password": "password"
+     
     },
     {
-        "firstName": "Jane",
-        "lastName": "Doe",
+       
         "username": "janedoe",
         "email": "janedoe@email.com",
-        "password": "password",
-        "state": "LA",
-        "zipcode": 70607
+        "password": "password"
     },
     {
-        "firstName": "Jim",
-        "lastName": "Doe",
         "username": "jimdoe",
         "email": "jimdoe@email.com",
-        "password": "password",
-        "state": "TX",
-        "zipcode": 77001
+        "password": "password"
     }
 ]

@@ -4,64 +4,38 @@
     <a id="title" class="navbar-brand berkshire-swash-regular" href="/">
       <img id="bookimg" src="../../img/bookimg.gif" />
       Shelf Life</a>
-    <button
-      class="navbar-toggler"
-      type="button"
-      data-bs-toggle="collapse"
-      data-bs-target="#navbarTogglerDemo02"
-      aria-controls="navbarTogglerDemo02"
-      aria-expanded="false"
-      aria-label="Toggle navigation"
-    >
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo02"
+      aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
-
     <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
       <ul class="navbar-nav me-auto mb-2 mb-lg-0">
         {{#if logged_in}}
-          <li class="nav-item">
-            <a
-              class="nav-link active"
-              aria-current="page"
-              href="/profile"
-            >Profile</a>
-          </li>
-          <!--<li
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="/profile">Profile</a>
+        </li>
+        <!--<li
                                 a /profile
                              /profile>-->
         {{else}}
-          <li class="nav-item">
-            <a href="/signup">
-              <button
-                id="signUp-btn"
-                type="button"
-                class="btn btn-primary oleo-script"
-                data-bs-toggle="modal"
-                data-bs-target="#staticBackdrop"
-                {{! href="/signup" }}
-              >
-                Sign Up!
-              </button>
-            </a>
-            <!-- <a class="nav-link active" aria-current="page" href="#">Sign Up</a> -->
-          </li>
-
-          {{! //took out href="#"  }}
-          <li class="nav-item">
-            <!--login link--> 
-            <li class="nav-item">
-              <button
-                class="nav-link btn btn-link"
-                type="button"
-                onclick="window.location.href='/login'"
-              >Log In</button>
-            </li>
+        <li class="nav-item">
+          <a href="/signup">
+            <button id="signUp-btn" type="button" class="btn btn-primary oleo-script" data-bs-toggle="modal"
+              data-bs-target="#staticBackdrop" {{! href="/signup" }}>
+              Sign Up!
+            </button>
+          </a>
+          <!-- <a class="nav-link active" aria-current="page" href="#">Sign Up</a> -->
+        </li>
+        {{! //took out href="#" }}
+        <li class="nav-item">
+          <a class="nav-link" href="/login">Log In</a>
+        </li>
         {{/if}}
         <li class="nav-item">
           <a class="nav-link" aria-disabled="false">About Us</a>
         </li>
       </ul>
-
       <!-- <form class="d-flex" role="search">
                         <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
                         <button class="btn btn-outline-success" type="submit">Search</button>
