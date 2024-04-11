@@ -26,10 +26,9 @@
     <title>Shelf Life</title>
   </head>
 
-
   <body>
 
-  {{!-- <body>
+    {{!-- <body>
 >>>>>>> f0fbba14be3aeabc51609c4bcc99e778a46c8c2d
 
     <nav class="navbar navbar-expand-lg bg-body-tertiary">
@@ -63,34 +62,6 @@
               <!--<li
                                 a /profile
                              /profile>-->
-<<<<<<< HEAD
-            {{else}}
-              <li class="nav-item">
-                <button
-                  id="signUp-btn"
-                  type="button"
-                  class="btn btn-primary oleo-script"
-                  data-bs-toggle="modal"
-                  data-bs-target="#staticBackdrop"
-                  href="/signup"
-                >
-                  Sign Up!
-                </button>
-                <!-- <a class="nav-link active" aria-current="page" href="#">Sign Up</a> -->
-              </li>
-
-              {{! //took out href="#"  }}
-              <li class="nav-item">
-                <a class="nav-link" href="/login">Log In</a>
-              </li>
-            {{/if}}
-            <li class="nav-item">
-              <a class="nav-link" aria-disabled="false">Donate</a>
-            </li>
-          </ul>
-
-          <!-- <form class="d-flex" role="search">
-=======
 <body>
     <nav class="navbar navbar-expand-lg bg-body-tertiary">
         <div class="container-fluid">
@@ -112,38 +83,25 @@
                     <li class="nav-item">
                         <button type="button" class="btn btn-primary" data-bs-toggle="modal"
                             data-bs-target="#staticBackdrop" href="/signup">
-=======
+
                     {{else}}
                     <li class="nav-item">
                         <button type="button" class="btn btn-primary" data-bs-toggle="modal"
                             data-bs-target="#staticBackdrop">
->>>>>>> f0fbba14be3aeabc51609c4bcc99e778a46c8c2d
                             Sign Up!
                         </button>
                         <!-- <a class="nav-link active" aria-current="page" href="#">Sign Up</a> -->
                     </li>
-<<<<<<< HEAD
-
-                    {{!-- //took out href="#" --}}
-                    <li class="nav-item">
-                        <a class="nav-link" href="/login">Log In</a>
-                    </li>
-
-=======
                     <li class="nav-item">
                         <a class="nav-link" href="{{>login.hbs}}">Log In</a>
                     </li>
->>>>>>> f0fbba14be3aeabc51609c4bcc99e778a46c8c2d
                     {{/if}}
                     <li class="nav-item">
                         <a class="nav-link" aria-disabled="false">Donate</a>
                     </li>
                 </ul>
                 <!-- <form class="d-flex" role="search">
-<<<<<<< HEAD
->>>>>>> Stashed changes
-=======
->>>>>>> f0fbba14be3aeabc51609c4bcc99e778a46c8c2d
+
                         <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
                         <button class="btn btn-outline-success" type="submit">Search</button>
                     </form> -->
@@ -151,10 +109,7 @@
       </div>
     </nav> --}}
 
-   {{!-- <header class="masthead">
-      <div id="bg-img" class="header">
-        <h1> </h1>
-      </div>
+    {{!-- <header class="masthead">
       <div class="container position-relative">
         <div class="row justify-content-center">
           <div class="col-xl-6">
@@ -163,32 +118,6 @@
               <h1 class="mb-5 berkshire-swash-regular">Welcome to Shelf Life!
                 Search for a book!</h1>
 
-<<<<<<< Updated upstream
-              <!--TODO: Search class + ID names for CSS conflicts and CHANGE-->
-              <form
-                class="form-subscribe"
-                id="contactForm"
-                data-sb-form-api-token="API_TOKEN"
-              >
-                <!-- Search book catalogue-->
-                <div action="/search" class="row" type="text">
-                  <div class="col">
-                    <input
-                      class="form-control form-control-lg"
-                      id="search-bar"
-                      type="text"
-                      placeholder="Search a Book"
-                      data-sb-validations="required,email"
-                      data-sb-can-submit="no"
-                    />
-
-                  </div>
-                  <div class="col-auto"><button
-                      class="btn btn-primary btn-lg"
-                      id="submitButton"
-                      type="button"
-                    >Submit!</button></div>
-=======
                         <!--TODO: Search class + ID names for CSS conflicts and CHANGE-->
                         <form class="form-subscribe" id="contactForm" data-sb-form-api-token="API_TOKEN">
                             
@@ -211,7 +140,6 @@
                                 </div>
                         </form>
                     </div>
->>>>>>> Stashed changes
                 </div>
 
               </form>
@@ -235,6 +163,6 @@
     {{/if}}
     <script src="/public/search.js"></script>
 
-  </body> 
+  </body>
 
 </html>

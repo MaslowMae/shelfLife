@@ -1,34 +1,37 @@
 [
-    {
-        "bookTitle": "The Great Gatsby",
-        "Author": "F. Scott Fitzgerald",
-         "Genre": "Fiction",
-         "ISBN": 9780743273565
-    },
-    {
-        "bookTitle": "To Kill a Mocking Bird",
-        "Author": "Harper Lee",
-         "Genre": "Fiction",
-         "ISBN": 9780061120084
-    },
-    {
-        "bookTitle": "The Catcher in the Rye",
-        "Author": "J.D. Salinger",
-         "Genre": "Fiction",
-         "ISBN": 9780316769488
-    },
-    {
-        "bookTitle": "The Grapes of Wrath",
-        "Author": "John Steinbeck",
-         "Genre": "Fiction",
-         "ISBN": 9780143039433
-    },
-    {
-        "bookTitle": "Brideshead Revisited",
-        "Author": "Evelyn Waugh",
-         "Genre": "Fiction",
-         "ISBN": 9780316216456
-    }
+  {
+    "bookTitle": "The Great Gatsby",
+    "Author": "F. Scott Fitzgerald",
+    "Genre": "Fiction",
+    "ISBN": 9780743273565,
+    "coverImageURL": ""
+  },
+  {
+    "bookTitle": "To Kill a Mocking Bird",
+    "Author": "Harper Lee",
+    "Genre": "Fiction",
+    "ISBN": 9780061120084,
+    "coverImageURL": ""
+  },
+  {
+    "bookTitle": "The Catcher in the Rye",
+    "Author": "J.D. Salinger",
+    "Genre": "Fiction",
+    "ISBN": 9780316769488,
+    "coverImageURL": ""
+  },
+  {
+    "bookTitle": "The Grapes of Wrath",
+    "Author": "John Steinbeck",
+    "Genre": "Fiction",
+    "ISBN": 9780143039433,
+    "coverImageURL": ""
+  },
+  {
+    "bookTitle": "Brideshead Revisited",
+    "Author": "Evelyn Waugh",
+    "Genre": "Fiction",
+    "ISBN": 9780316216456,
+    "coverImageURL": ""
+  }
 ]
-
-
