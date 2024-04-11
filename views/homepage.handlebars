@@ -13,11 +13,12 @@
       aria-expanded="false"
       aria-label="Toggle navigation"
     >
-    <span class="navbar-toggler-icon"></span>
+      <span class="navbar-toggler-icon"></span>
     </button>
-
     <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
       <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <!-- Include sign-up modal button -->
+        {{#if logged_in}}
           <li class="nav-item">
             <a
               class="nav-link active"
@@ -37,21 +38,26 @@
               data-bs-toggle="modal"
               data-bs-target="#staticBackdrop"
               href="/signup"
+            >
               Sign Up!
             </button>
             <!-- <a class="nav-link active" aria-current="page" href="#">Sign Up</a> -->
           </li>
-
           {{! //took out href="#"  }}
           <li class="nav-item">
-            <a class="nav-link" href="/login">Log In</a>
-          </li>
+            <!--login link--> 
+            <li class="nav-item">
+              <button
+                class="nav-link btn btn-link"
+                type="button"
+                onclick="window.location.href='/login'"
+              >Log In</button>
+            </li>
         {{/if}}
         <li class="nav-item">
           <a class="nav-link" aria-disabled="false">About Us</a>
         </li>
       </ul>
-
       <!-- <form class="d-flex" role="search">
                         <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
                         <button class="btn btn-outline-success" type="submit">Search</button>
@@ -59,7 +65,6 @@
     </div>
   </div>
 </nav>
-
 <header class="masthead">
   {{! <div id="bg-img" class="header">
     <h1> </h1>
@@ -71,7 +76,6 @@
           <!-- Page heading-->
           <h1 class="mb-5 berkshire-swash-regular">Welcome to Shelf Life! Search
             for a book!</h1>
-
           <!--TODO: Search class + ID names for CSS conflicts and CHANGE-->
           <form
             class="form-subscribe"
@@ -89,7 +93,6 @@
                   data-sb-validations="required,email"
                   data-sb-can-submit="no"
                 />
-
               </div>
               <div class="col-auto"><button
                   class="btn btn-primary btn-lg"
@@ -97,20 +100,17 @@
                   type="button"
                 >Submit!</button></div>
             </div>
-
           </form>
         </div>
       </div>
     </div>
   </div>
 </header>
-
 <div>
   {{#each books as |b|}}
     <section
       style="display:inline-flex; justify-content:center; align-items:center; text-align:center"
     >
-
       <div
         id="books"
         style="width:200px; height:200px; border:solid 2px black; border-radius:10px; box-shadow:0px 0px 10px black;"
@@ -119,11 +119,9 @@
         <small>Author-</small>
         <p>{{b.Author}}</p>
       </div>
-
     </section>
   {{/each}}
 </div>
-
 <section class="features-icons bg-light text-center">
   <div class="container">
     <div class="row">
@@ -163,7 +161,6 @@
     </div>
   </div>
 </section>
-
 <section class="showcase">
   <div class="container-fluid p-0">
     <div class="row g-0">
@@ -208,7 +205,6 @@
     </div>
   </div>
 </section>
-
 <section class="testimonials text-center bg-light">
   <div class="container">
     <h2 class="mb-5">What people are saying...</h2>
@@ -253,151 +249,43 @@
     </div>
   </div>
 </section>
-
 <section class="call-to-action text-white text-center" id="signup">
   <div class="container position-relative">
     <div class="row justify-content-center">
       <div class="col-xl-6">
         <h2 class="mb-4">Ready to get started? Sign up now!</h2>
-
-<!-- Button trigger modal -->
-<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#signupModal">
-    Sign Up
-</button>
-
-<!-- Include the sign-up modal (AM I SUPPOSED TO PUT THE SIGN UP MODAL HERE OR IN SIGNUP>HANDLEBARS) -->
-<div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
-    aria-labelledby="staticBackdropLabel" aria-hidden="true">
-    <div class="modal-dialog">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h1 class="modal-title fs-5" id="staticBackdropLabel">Sign Up for free!</h1>
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-            </div>
-
-            <div class="modal-body">
-                <form action="/signup" method="POST" class="row g-3 needs-validation" novalidate>
-                    <div class="col-md-4">
-                        <label for="fName-signup" class="form-label">First Name</label>
-                        <input type="text" class="form-control" id="fName-signup" name="firstName" required>
-                        <div class="valid-feedback">Looks good!</div>
-                    </div>
-
-                    <div class="col-md-4">
-                        <label for="lName-signup" class="form-label">Last Name</label>
-                        <input type="text" class="form-control" id="lName-signup" name="lastName" required>
-                        <div class="valid-feedback">Looks good!</div>
-                    </div>
-
-                    <div class="col-md-4">
-                        <label for="username-signup" class="form-label">Username</label>
-                        <div class="input-group has-validation">
-                            <span class="input-group-text" id="inputGroupPrepend">@</span>
-                            <input type="text" class="form-control" id="username-signup" name="username" required>
-                            <div class="invalid-feedback">Please choose a username.</div>
-                        </div>
-                    </div>
-                        <div class="col-md-4">
-                            <label for="validationCustom02" class="form-label">Email</label>
-                            <input type="email" class="form-control" id="validationCustom06" value="" required>
-                            <div class="valid-feedback"> Looks good!</div>
-                        </div>
-
-                    <div class="col-md-6">
-                        <label for="password-signup" class="form-label">Password</label>
-                        <input type="password" class="form-control" id="password-signup" name="password" required>
-                        <div class="invalid-feedback">Please enter a valid password.</div>
-
-                        <div class="col-md-3">
-                            <label for="state-signup" class="form-label">State</label>
-                            <select class="form-select" id="state-signup" name="state" required>
-                                <option selected value="">Choose...</option>
-                                <option>
-                                <option>Alabama</option>
-                                <option>Alaska</option>
-                                <option>Arizona</option>
-                                <option>Arkansas</option>
-                                <option>California</option>
-                                <option>Colorado</option>
-                                <option>Connecticut</option>
-                                <option>Delaware</option>
-                                <option>Florida</option>
-                                <option>Georgia</option>
-                                <option>Hawaii</option>
-                                <option>Idaho</option>
-                                <option>Illinois</option>
-                                <option>Indiana</option>
-                                <option>Iowa</option>
-                                <option>Kansas</option>
-                                <option>Kentucky</option>
-                                <option>Louisiana</option>
-                                <option>Maine</option>
-                                <option>Maryland</option>
-                                <option>Massachusetts</option>
-                                <option>Michigan</option>
-                                <option>Minnesota</option>
-                                <option>Mississippi</option>
-                                <option>Missouri</option>
-                                <option>Montana</option>
-                                <option>Nebraska</option>
-                                <option>Nevada</option>
-                                <option>New Hampshire</option>
-                                <option>New Jersey</option>
-                                <option>New Mexico</option>
-                                <option>New York</option>
-                                <option>North Carolina</option>
-                                <option>North Dakota</option>
-                                <option>Ohio</option>
-                                <option>Oklahoma</option>
-                                <option>Oregon</option>
-                                <option>Pennsylvania</option>
-                                <option>Rhode Island</option>
-                                <option>South Carolina</option>
-                                <option>South Dakota</option>
-                                <option>Tennessee</option>
-                                <option>Texas</option>
-                                <option>Utah</option>
-                                <option>Vermont</option>
-                                <option>Virginia</option>
-                                <option>Washington</option>
-                                <option>West Virginia</option>
-                                <option>Wisconsin</option>
-                                <option>Wyoming</option>
-                            </select>
-                            <div class="invalid-feedback"> Please select a valid state.</div>
-                        </div>
-
-                        <div class="col-md-3">
-                            <label for="zip-signup" class="form-label">Zip</label>
-                            <input type="text" class="form-control" id="zip-signup" name="zip" required>
-                            <div class="invalid-feedback">Please provide a valid zip.</div>
-                        </div>
-
-                        <div class="col-12">
-                            <div class="form-check">
-                                <input class="form-check-input" type="checkbox" value="" id="terms-check" required>
-                                <label class="form-check-label" for="terms-check">Agree to terms and conditions</label>
-                                <div class="invalid-feedback">You must agree before submitting.</div>
-                            </div>
-                        </div>
-                        <div class="col-12">
-                            <button class="btn btn-primary" type="submit">Submit</button>
-                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Nevermind</button>
-                        </div>
-                    </form>
-                </div>
-            </div>
-        </div>
+        <form
+          class="form-subscribe"
+          id="contactFormFooter"
+          data-sb-form-api-token="API_TOKEN"
+        >
+          <!-- Sign Up Button-->
+          <div class="row">
+            <div class="auto">
+              <button
+                class="btn btn-primary btn-lg"
+                id="submitButton"
+                data-bs-toggle="modal"
+                data-bs-target="#staticBackdrop"
+                type="button"
+                href="/signup"
+              >Get Started!</button></div>
+          </div>
+        </form>
+      </div>
     </div>
-    <div class="modal-footer"></div>
-{{> signup}}
-
-<script
-  src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
-  integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
-  crossorigin="anonymous"
-></script>
-<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
-<script src="./search.js"></script>
-
-<!--This will be the homepage of our shelfLife app that allows users to trade books with each other -->
+  </div>
+</section>
+<div
+  class="modal fade"
+  id="staticBackdrop"
+  data-bs-backdrop="static"
+  data-bs-keyboard="false"
+  tabindex="-1"
+  aria-labelledby="staticBackdropLabel"
+  aria-hidden="true"
+>
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id=&quo...
