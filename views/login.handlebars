@@ -1,10 +1,12 @@
 <ul>
-  <li id="su"><a href="/" title="create your own account!">signup</a></li>
-</ul>
+  <!--modal tied to sign-up link-->
+  <ul>
+    <li id="su"><a data-bs-toggle="modal" data-bs-target="#staticBackdrop" href="/signup" title="create your own account!">signup</a></li>
+  </ul>
 <section class="login-page">
-  <form>
+  <form class="form login-form">
     <div class="form-group">
-      <label for="exampleInputPassword1">Username</label>
+      <label for="username">Username</label>
       <input
         type="text"
         class="form-control"
@@ -14,12 +16,12 @@
       />
     </div>
     <div class="form-group">
-      <label for="exampleInputEmail1">Email</label>
+      <label for="email-login">Email</label>
 
       <input
         type="email"
         class="form-control"
-        id="exampleInputEmail1"
+        id="email-login"
         aria-describedby="emailHelp"
         placeholder="Enter email"
         required
@@ -28,18 +30,255 @@
         information private</small>
     </div>
     <div class="form-group">
-      <label for="exampleInputPassword1">Password</label>
+      <label for="password-login">Password</label>
       <input
         type="password"
         class="form-control"
-        id="exampleInputPassword1"
+        id="password-login"
         placeholder="Password"
         minlength="8"
         required
       />
     </div><br />
+    <!--REMEMBER ME-->
     <button type="submit" class="btn btn-primary" id="login-sub">Submit</button>
   </form>
 </section>
+
+
+<div
+  class="modal fade"
+  id="staticBackdrop"
+  data-bs-backdrop="static"
+  data-bs-keyboard="false"
+  tabindex="-1"
+  aria-labelledby="staticBackdropLabel"
+  aria-hidden="true"
+>
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="staticBackdropLabel">Sign Up for free!</h1>
+        <button
+          type="button"
+          class="btn-close"
+          data-bs-dismiss="modal"
+          aria-label="Close"
+        ></button>
+      </div>
+      <div class="modal-body">
+        <form class="row g-3 needs-validation" novalidate>
+          <div class="col-md-4">
+            <label for="validationCustom01" class="form-label">First name</label>
+            <input
+              type="text"
+              class="form-control"
+              id="fName-signup"
+              name="firstName"
+              value=""
+              required
+            />
+            <div class="valid-feedback">
+              Looks good!
+            </div>
+          </div>
+          <div class="col-md-4">
+            <label
+              for="validationCustom02"
+              name="lastName"
+              class="form-label"
+            >Last name</label>
+            <input
+              type="text"
+              class="form-control"
+              id="validationCustom02"
+              value=""
+              required
+            />
+            <div class="valid-feedback">
+              Looks good!
+            </div>
+          </div>
+          <div class="col-md-4">
+            <label
+              for="validationCustom02"
+              name="email"
+              class="form-label"
+            >Email</label>
+            <input
+              type="email"
+              class="form-control"
+              id="validationCustom06"
+              value=""
+              required
+            />
+            <div class="valid-feedback">
+              Looks good!
+            </div>
+          </div>
+          <div class="col-md-4">
+            <label
+              for="validationCustomUsername"
+              name="username"
+              class="form-label"
+            >Username</label>
+            <div class="input-group has-validation">
+              <span class="input-group-text" id="inputGroupPrepend">@</span>
+              <input
+                type="text"
+                class="form-control"
+                id="validationCustomUsername"
+                aria-describedby="inputGroupPrepend"
+                required
+              />
+              <div class="invalid-feedback">
+                Please choose a username.
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <label
+              for="validationCustom03"
+              name="password"
+              class="form-label"
+            >Password</label>
+            <input
+              type="password"
+              class="form-control"
+              id="validationCustom03"
+              required
+            />
+            <div class="invalid-feedback">
+              Please enter a password.
+            </div>
+          </div>
+          <div class="col-md-3">
+            <label for="validationCustom04" class="form-label">State</label>
+            <select
+              class="form-select"
+              name="state"
+              id="validationCustom04"
+              required
+            >
+              <option selected value="">Choose...</option>
+              <option>
+                <option>Alabama</option>
+                <option>Alaska</option>
+                <option>Arizona</option>
+                <option>Arkansas</option>
+                <option>California</option>
+                <option>Colorado</option>
+                <option>Connecticut</option>
+                <option>Delaware</option>
+                <option>Florida</option>
+                <option>Georgia</option>
+                <option>Hawaii</option>
+                <option>Idaho</option>
+                <option>Illinois</option>
+                <option>Indiana</option>
+                <option>Iowa</option>
+                <option>Kansas</option>
+                <option>Kentucky</option>
+                <option>Louisiana</option>
+                <option>Maine</option>
+                <option>Maryland</option>
+                <option>Massachusetts</option>
+                <option>Michigan</option>
+                <option>Minnesota</option>
+                <option>Mississippi</option>
+                <option>Missouri</option>
+                <option>Montana</option>
+                <option>Nebraska</option>
+                <option>Nevada</option>
+                <option>New Hampshire</option>
+                <option>New Jersey</option>
+                <option>New Mexico</option>
+                <option>New York</option>
+                <option>North Carolina</option>
+                <option>North Dakota</option>
+                <option>Ohio</option>
+                <option>Oklahoma</option>
+                <option>Oregon</option>
+                <option>Pennsylvania</option>
+                <option>Rhode Island</option>
+                <option>South Carolina</option>
+                <option>South Dakota</option>
+                <option>Tennessee</option>
+                <option>Texas</option>
+                <option>Utah</option>
+                <option>Vermont</option>
+                <option>Virginia</option>
+                <option>Washington</option>
+                <option>West Virginia</option>
+                <option>Wisconsin</option>
+                <option>Wyoming</option>
+              </option>
+            </select>
+            <div class="invalid-feedback">
+              Please select a valid state.
+            </div>
+          </div>
+          <div class="col-md-3">
+            <label for="validationCustom05" class="form-label">Zip</label>
+            <input
+              type="text"
+              class="form-control"
+              name="zipcode"
+              id="validationCustom05"
+              required
+            />
+            <div class="invalid-feedback">
+              Please provide a valid zip.
+            </div>
+          </div>
+          <div class="col-12">
+            <div class="form-check">
+              <input
+                class="form-check-input"
+                type="checkbox"
+                value=""
+                id="invalidCheck"
+                required
+              />
+              <label class="form-check-label" for="invalidCheck">
+                Agree to terms and conditions
+              </label>
+              <div class="invalid-feedback">
+                You must agree before submitting.
+              </div>
+            </div>
+          </div>
+          <div class="col-12">
+            <button class="btn btn-primary" type="submit">Submit form</button>
+          </div>
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button
+          type="button"
+          class="btn btn-secondary"
+          data-bs-dismiss="modal"
+        >Nevermind</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+  (() => { 'use strict' // Fetch all the forms we want to apply custom Bootstrap
+  validation styles to const forms =
+  document.querySelectorAll('.needs-validation') // Loop over them and prevent
+  submission Array.from(forms).forEach(form => { form.addEventListener('submit',
+  event => { if (!form.checkValidity()) { event.preventDefault()
+  event.stopPropagation() } form.classList.add('was-validated') }, false) })
+  })()
+</script>
+<script
+  src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+  integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+  crossorigin="anonymous"
+></script>
+<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+<script src="./search.js"></script>
 
 <script src="./js/login.js"></script>
