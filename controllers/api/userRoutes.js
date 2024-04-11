@@ -34,7 +34,7 @@ router.post("/signup", async (req, res) => {
       message: "Welcome to Shelfie!",
       user: newUser,
     })
-    } catch (error) {
+    //} catch (error) {
 
     // If an error occurs, send an error response
     console.error("failed to create user:", error);
