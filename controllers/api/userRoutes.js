@@ -47,14 +47,8 @@ router.post("/", async (req, res) => {
     });
 
     // Send a success response
-<<<<<<< HEAD
-    console.log(newUser);
-    res.render("login");
-    // res.status(200).json({ message: "success", user: newUser });
-=======
 
     res.send(200).json({ message: "success", user: newUser });
->>>>>>> a79a32369e2da0da060b6357ed95895146838a32
   } catch (error) {
 
     res.status(200).json({
