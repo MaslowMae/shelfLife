@@ -46,55 +46,6 @@
           </li>
 
 
-{{!-- <<<<<<< HEAD
-<div class="">
-    <h2>{{bookTitle}}</h2>
-    <p>{{Author}}</p>
-    <p>{{Genre}}</p>
-    {{!-- Picture from API --}}
-
-</div>
-<hr>
-<div class="">
-    <h2>Posts about {{bookTitle}}</h2>
-  {{#if posts.length}}
-  <ul class="">
-    {{#each posts}}
-    <li class="">
-      <p>{{this.content}}</p>
-      <p>By: {{this.user.username}}</p>
-    </li>
-    {{/each}}
-=======
-          {{! //took out href="#"  }}
-          <li class="nav-item">
-            <a class="nav-link" href="/login">Log In</a>
-          </li>
-        {{/if}}
-        <li class="nav-item">
-          <a class="nav-link" aria-disabled="false">Donate</a>
-        </li>
-
-
-
-      <!-- <form class="d-flex" role="search">
-                        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-                        <button class="btn btn-outline-success" type="submit">Search</button>
-                    </form> -->
-    </div>
-  </div>
-</nav>
-=======
-  </ul>
-    {{else}}
-    <p>No posts yet!</p>
-    {{/if}}
-
-
-</div> --}}
-=======
-<!--This page needs to be a table-->
-{{!-- >>>>>>> be815b8 (small comment) --}}
 <div class="container mt-5">
     <div id="bg-img" class="header">
     <h1> </h1>
@@ -150,7 +101,6 @@
                                 <div class="fw-bold">{{this.user.username}}</div>
                                 {{this.content}}
                                 <!-- Child comment 1-->
-                                
                             </div>
                             {{/each}}
                         </div>
@@ -163,48 +113,4 @@
                 </div>
             </section>
         </div>
-        <script></script>
-        <!-- Side widgets-->
-        {{!-- <div class="col-lg-4">
-            <!-- Search widget-->
-            <div class="card mb-4">
-                <div class="card-header">Search</div>
-                <div class="card-body">
-                    <div class="input-group">
-                        <input class="form-control" type="text" placeholder="Enter search term..."
-                            aria-label="Enter search term..." aria-describedby="button-search">
-                        <button class="btn btn-primary" id="button-search" type="button">Go!</button>
-                    </div>
-                </div>
-            </div>
-            <!-- Categories widget-->
-            <div class="card mb-4">
-                <div class="card-header">Categories</div>
-                <div class="card-body">
-                    <div class="row">
-                        <div class="col-sm-6">
-                            <ul class="list-unstyled mb-0">
-                                <li><a href="#!">Web Design</a></li>
-                                <li><a href="#!">HTML</a></li>
-                                <li><a href="#!">Freebies</a></li>
-                            </ul>
-                        </div>
-                        <div class="col-sm-6">
-                            <ul class="list-unstyled mb-0">
-                                <li><a href="#!">JavaScript</a></li>
-                                <li><a href="#!">CSS</a></li>
-                                <li><a href="#!">Tutorials</a></li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <!-- Side widget-->
-            <div class="card mb-4">
-                <div class="card-header">Side Widget</div>
-                <div class="card-body">You can put anything you want inside of these side widgets. They are easy to use,
-                    and feature the Bootstrap 5 card component!</div>
-            </div>
-        </div>
-    </div> --}}
 </div>

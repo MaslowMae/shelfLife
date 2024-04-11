@@ -1,5 +1,4 @@
-const express = require("express");
-const router = express.Router();
+const router = require("express").Router();
 const { User } = require("../../models");
 
 // handle sign up route
@@ -31,7 +30,8 @@ router.post("/signup", async (req, res) => {
       message: "Welcome to Shelfie!",
       user: newUser,
     })
-    } catch (error) {
+    } 
+   catch (error) {
     // If an error occurs, send an error response
     console.error("failed to create user:", error);
     res.status(500).json({ error: "Failed to create user" });

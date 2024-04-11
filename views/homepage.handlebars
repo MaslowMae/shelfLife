@@ -13,7 +13,7 @@
       aria-expanded="false"
       aria-label="Toggle navigation"
     >
-    <span class="navbar-toggler-icon"></span>
+      <span class="navbar-toggler-icon"></span>
     </button>
 
     <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
@@ -31,15 +31,18 @@
                              /profile>-->
         {{else}}
           <li class="nav-item">
-            <button
-              id="signUp-btn"
-              type="button"
-              class="btn btn-primary oleo-script"
-              data-bs-toggle="modal"
-              data-bs-target="#staticBackdrop"
-              href="/signup"
-              Sign Up!
-            </button>
+            <a href="/signup">
+              <button
+                id="signUp-btn"
+                type="button"
+                class="btn btn-primary oleo-script"
+                data-bs-toggle="modal"
+                data-bs-target="#staticBackdrop"
+                {{! href="/signup" }}
+              >
+                Sign Up!
+              </button>
+            </a>
             <!-- <a class="nav-link active" aria-current="page" href="#">Sign Up</a> -->
           </li>
 
@@ -68,9 +71,6 @@
 </nav>
 
 <header class="masthead">
-  {{! <div id="bg-img" class="header">
-    <h1> </h1>
-  </div> }}
   <div class="container position-relative">
     <div class="row justify-content-center">
       <div class="col-xl-6">
@@ -224,8 +224,8 @@
         <div class="testimonial-item mx-auto mb-5 mb-lg-0">
           <img
             class="img-fluid rounded-circle mb-3"
-            src="assets/img/testimonials-1.jpg"
-            alt="..."
+            src="https://media.istockphoto.com/id/1171169127/photo/headshot-of-cheerful-handsome-man-with-trendy-haircut-and-eyeglasses-isolated-on-gray.jpg?s=612x612&w=0&k=20&c=yqAKmCqnpP_T8M8I5VTKxecri1xutkXH7zfybnwVWPQ="
+            alt="testimony1"
           />
           <h5>Margaret E.</h5>
           <p class="font-weight-light mb-0">"This is fantastic! Thanks so much
@@ -236,20 +236,19 @@
         <div class="testimonial-item mx-auto mb-5 mb-lg-0">
           <img
             class="img-fluid rounded-circle mb-3"
-            src="assets/img/testimonials-2.jpg"
-            alt="..."
+            src="https://media.istockphoto.com/id/1386479313/photo/happy-millennial-afro-american-business-woman-posing-isolated-on-white.jpg?s=612x612&w=0&k=20&c=8ssXDNTp1XAPan8Bg6mJRwG7EXHshFO5o0v9SIj96nY="
+            alt="testimony2"
           />
           <h5>Fred S.</h5>
-          <p class="font-weight-light mb-0">"Bootstrap is amazing. I've been
-            using it to create lots of super nice landing pages."</p>
+          <p class="font-weight-light mb-0">"Shelf Life is a whole vibe."</p>
         </div>
       </div>
       <div class="col-lg-4">
         <div class="testimonial-item mx-auto mb-5 mb-lg-0">
           <img
             class="img-fluid rounded-circle mb-3"
-            src="assets/img/testimonials-3.jpg"
-            alt="..."
+            src="https://thumbs.dreamstime.com/b/headshot-african-american-male-glasses-posing-studio-portrait-smiling-man-wearing-casual-clothes-look-camera-image-153874435.jpg"
+            alt="testimony3"
           />
           <h5>Sarah W.</h5>
           <p class="font-weight-light mb-0">"Thanks so much for making these

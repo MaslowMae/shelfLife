@@ -1,8 +1,6 @@
-const express = require("express");
-const router = express.Router();
-const { Post, Book } = require('../models');
-const axios = require('axios');
-
+const router = require("express").Router();
+const { Post, Book } = require("../models");
+// const axios = require('axios');
 
 // Display main page with search functionality
 router.get("/", async (req, res) => {
@@ -72,10 +70,11 @@ router.get("/login", (req, res) => {
   res.render("login");
 });
 router.get("/signup", (req, res) => {
-  if (req.session.logged_in) {
-    res.redirect("/");
-    return;
-  }
+  console.log("Signup");
+  // if (req.session.logged_in) {
+  //   res.redirect("/");
+  //   return;
+  // }
 
   res.render("signup");
 });
