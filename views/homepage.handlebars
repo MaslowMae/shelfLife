@@ -46,8 +46,14 @@
 
           {{! //took out href="#"  }}
           <li class="nav-item">
-            <a class="nav-link" href="/login">Log In</a>
-          </li>
+            <!--login link--> 
+            <li class="nav-item">
+              <button
+                class="nav-link btn btn-link"
+                type="button"
+                onclick="window.location.href='/login'"
+              >Log In</button>
+            </li>
         {{/if}}
         <li class="nav-item">
           <a class="nav-link" aria-disabled="false">About Us</a>
