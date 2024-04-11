@@ -21,8 +21,6 @@ User.init({
   },
   lastName: {
     type: DataTypes.STRING,
-  
-  
   },
   username: {
     type: DataTypes.STRING,
