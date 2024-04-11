@@ -33,7 +33,7 @@ const user = document.querySelector('#user-signup').value.trim();
   const password = document.querySelector('#password-signup').value.trim();
 
   if (firstName && lastName && user && email && password) {
-    const response = await fetch('/api/users', {
+    const response = await fetch('/api/users/signup', {
       method: 'POST',
       body: JSON.stringify({ firstName, lastName, user, email, password }),
       headers: { 'Content-Type': 'application/json' },
