@@ -26,10 +26,9 @@
     <title>Shelf Life</title>
   </head>
 
-
   <body>
 
-  {{!-- <body>
+    {{!-- <body>
 >>>>>>> f0fbba14be3aeabc51609c4bcc99e778a46c8c2d
 
     <nav class="navbar navbar-expand-lg bg-body-tertiary">
@@ -63,52 +62,46 @@
               <!--<li
                                 a /profile
                              /profile>-->
-            {{else}}
-              <li class="nav-item">
-                <button
-                  id="signUp-btn"
-                  type="button"
-                  class="btn btn-primary oleo-script"
-                  data-bs-toggle="modal"
-                  data-bs-target="#staticBackdrop"
-                  href="/signup"
-                >
-                  Sign Up!
-                </button>
-                <!-- <a class="nav-link active" aria-current="page" href="#">Sign Up</a> -->
-              </li>
+<body>
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+        <div class="container-fluid">
+            <!--href="/"-->
+            <a class="navbar-brand" href="/">Shelf Life</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo02"
+                aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <!-- Include sign-up modal button -->
+                    {{#if logged_in}}
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="/profile">Profile</a>
+                    </li>
 
-              {{! //took out href="#"  }}
-              <li class="nav-item">
-                <a class="nav-link" href="/login">Log In</a>
-              </li>
-            {{/if}}
-            <li class="nav-item">
-              <a class="nav-link" aria-disabled="false">Donate</a>
-            </li>
-          </ul>
+                    {{else}}
+                    <li class="nav-item">
+                        <button type="button" class="btn btn-primary" data-bs-toggle="modal"
+                            data-bs-target="#staticBackdrop" href="/signup">
 
-          <!-- <form class="d-flex" role="search">
+                    {{else}}
+                    <li class="nav-item">
+                        <button type="button" class="btn btn-primary" data-bs-toggle="modal"
+                            data-bs-target="#staticBackdrop">
                             Sign Up!
                         </button>
                         <!-- <a class="nav-link active" aria-current="page" href="#">Sign Up</a> -->
                     </li>
-
-                    {{!-- //took out href="#" --}}
                     <li class="nav-item">
-                        <a class="nav-link" href="/login">Log In</a>
+                        <a class="nav-link" href="{{>login.hbs}}">Log In</a>
                     </li>
-
                     {{/if}}
                     <li class="nav-item">
                         <a class="nav-link" aria-disabled="false">Donate</a>
                     </li>
                 </ul>
                 <!-- <form class="d-flex" role="search">
-<<<<<<< HEAD
->>>>>>> Stashed changes
-=======
->>>>>>> f0fbba14be3aeabc51609c4bcc99e778a46c8c2d
+
                         <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
                         <button class="btn btn-outline-success" type="submit">Search</button>
                     </form> -->
@@ -116,10 +109,7 @@
       </div>
     </nav> --}}
 
-   {{!-- <header class="masthead">
-      <div id="bg-img" class="header">
-        <h1> </h1>
-      </div>
+    {{!-- <header class="masthead">
       <div class="container position-relative">
         <div class="row justify-content-center">
           <div class="col-xl-6">
@@ -128,30 +118,28 @@
               <h1 class="mb-5 berkshire-swash-regular">Welcome to Shelf Life!
                 Search for a book!</h1>
 
-              <!--TODO: Search class + ID names for CSS conflicts and CHANGE-->
-              <form
-                class="form-subscribe"
-                id="contactForm"
-                data-sb-form-api-token="API_TOKEN"
-              >
-                <!-- Search book catalogue-->
-                <div action="/search" class="row" type="text">
-                  <div class="col">
-                    <input
-                      class="form-control form-control-lg"
-                      id="search-bar"
-                      type="text"
-                      placeholder="Search a Book"
-                      data-sb-validations="required,email"
-                      data-sb-can-submit="no"
-                    />
-
-                  </div>
-                  <div class="col-auto"><button
-                      class="btn btn-primary btn-lg"
-                      id="submitButton"
-                      type="button"
-                    >Submit!</button></div>
+                        <!--TODO: Search class + ID names for CSS conflicts and CHANGE-->
+                        <form class="form-subscribe" id="contactForm" data-sb-form-api-token="API_TOKEN">
+                            
+                            
+                            <!-- Search book catalogue-->
+                            <div action="/search" class="row" type="text">
+                                <div class="col">
+                                    <input class="form-control form-control-lg" id="search-bar" type="text"
+                                        placeholder="Search a Book" data-sb-validations="required,email"
+                                        data-sb-can-submit="no">
+                                    <div>
+                                        <img src="{{ coverImageURL }}" alt="Book Cover">
+                                        <h1>{{ bookTitle }}</h1>
+                                        <p>Author: {{ author }}</p>
+                                        <p>Genre: {{ genre }}</p>
+                                    </div>
+                                </div>
+                                <div class="col-auto"><button class="btn btn-primary btn-lg" id="search-button"
+                                        type="button">Search</button></div>
+                                </div>
+                        </form>
+                    </div>
                 </div>
 
               </form>
@@ -175,6 +163,6 @@
     {{/if}}
     <script src="/public/search.js"></script>
 
-  </body> 
+  </body>
 
 </html>
